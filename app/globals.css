@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-manrope), sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  /* Brand Color System Tokens */
+  --color-navy: #071A2A;
+  --color-navy-dark: #04101B;
+  --color-navy-light: #0C1E30;
+  --color-navy-surface: #102538;
+  
+  --color-cyan: #08A9E6;
+  --color-cyan-hover: #078FCC;
+  --color-cyan-light: #EBF7FD;
+  --color-cyan-muted: #D3EFFB;
+
+  --color-green: #12C98A;
+  --color-green-light: #E8FAF3;
+  
+  --color-text-primary: #0B1724;
+  --color-text-secondary: #5F7183;
+  --color-text-muted: #8E9FAA;
+
+  --color-bg-white: #FFFFFF;
+  --color-bg-soft: #F7FAFC;
+  --color-border: #DDE6ED;
+  --color-border-dark: #1A2E40;
+
+  /* Backward compatibility aliases */
+  --color-blue-primary: #08A9E6;
+  --color-blue-hover: #078FCC;
+  --color-blue-light: #EBF7FD;
+  --color-charcoal: #0B1724;
+  --color-soft-bg: #F7FAFC;
+  --color-border-subtle: #DDE6ED;
+  --color-muted-text: #5F7183;
+  --color-muted-light: #8E9FAA;
+}
+
+:root {
+  --color-navy: #071A2A;
+  --color-cyan: #08A9E6;
+  --color-cyan-hover: #078FCC;
+  --color-green: #12C98A;
+  --color-text-primary: #0B1724;
+  --color-text-secondary: #5F7183;
+  --color-background: #FFFFFF;
+  --color-background-soft: #F7FAFC;
+  --color-border: #DDE6ED;
+
+  --background: #FFFFFF;
+  --foreground: #0B1724;
+
+  /* Sticky Header Dynamic Height Token */
+  --header-height: 67px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-height: 69px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --header-height: 98px;
+  }
+}
+
+/* Global Shared Layout Clearance for Fixed/Sticky Header */
+main {
+  padding-top: var(--header-height);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-manrope), sans-serif;
+}
+
+::selection {
+  background-color: #08A9E6;
+  color: #FFFFFF;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #DDE6ED;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #08A9E6;
+}
+
+/* ==========================================================================
+   Dark Mode System
+   ========================================================================== */
+.dark {
+  --background: #061019;
+  --foreground: #E2E8F0;
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #061019;
+  color: #E2E8F0;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #061019;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #1E3347;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #08A9E6;
+}
+
+/* Dark mode component overrides */
+.dark .bg-white,
+.dark .bg-white\/95,
+.dark .bg-white\/90,
+.dark .bg-white\/80 {
+  background-color: #0C1B2B !important;
+}
+
+.dark .bg-\[\#F7FAFC\],
+.dark .bg-\[\#F7FAFC\]\/80 {
+  background-color: #081624 !important;
+}
+
+.dark .bg-gradient-to-b.from-\[\#F7FAFC\].to-white,
+.dark .bg-gradient-to-b.from-white.to-\[\#F7FAFC\] {
+  background: linear-gradient(to bottom, #081624, #0C1B2B) !important;
+}
+
+.dark .text-\[\#0B1724\],
+.dark .text-\[\#071A2A\] {
+  color: #FFFFFF !important;
+}
+
+.dark .text-\[\#5F7183\] {
+  color: #94A3B8 !important;
+}
+
+.dark .border-\[\#DDE6ED\] {
+  border-color: #1A2E40 !important;
+}
+
+.dark .border-\[\#EBF7FD\] {
+  border-color: #15324E !important;
+}
+
+.dark .bg-\[\#EBF7FD\] {
+  background-color: #102538 !important;
+}
+
+.dark .hover\:bg-\[\#F7FAFC\]:hover {
+  background-color: #102538 !important;
+}
+
+/* Form inputs in dark mode */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #081624 !important;
+  color: #FFFFFF !important;
+  border-color: #1A2E40 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748B !important;
+}
+
+.dark .shadow-sm,
+.dark .shadow-md,
+.dark .shadow-lg,
+.dark .shadow-xl {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ==========================================================================
+   Full-Viewport Scroll-Snap Architecture
+   ========================================================================== */
+html:has([id$="-scroll-container"]),
+body:has([id$="-scroll-container"]) {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+main:has([id$="-scroll-container"]) + footer,
+main:has([id$="-scroll-container"]) ~ footer {
+  display: none !important;
+}
+
+body:has([id$="-scroll-container"]) #site-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+[id$="-scroll-container"] {
+  height: calc(100vh - var(--header-height)) !important;
+  height: calc(100dvh - var(--header-height)) !important;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+[id$="-scroll-container"] > section,
+[id$="-scroll-container"] > div[class*="-snap-section"],
+[id$="-scroll-container"] > [data-snap-section] {
+  min-height: calc(100vh - var(--header-height)) !important;
+  min-height: calc(100dvh - var(--header-height)) !important;
+  height: calc(100vh - var(--header-height)) !important;
+  height: calc(100dvh - var(--header-height)) !important;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+[id$="-scroll-container"] > div[class*="-snap-section"] {
+  background-color: #071A2A !important;
+}
+
