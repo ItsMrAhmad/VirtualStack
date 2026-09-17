@@ -9,7 +9,7 @@ export default function HowItWorks() {
       icon: <MessageSquareCheck className="w-6 h-6 text-[#08A9E6]" />,
       title: "Tell us what you need",
       description:
-        "In a focused 20-minute discovery call, we review your current operational workload, tool stack, required hours, and target KPIs.",
+        "In a focused 10-minute discovery call, we review your current operational workload, tool stack, required hours, and target KPIs.",
       deliverable: "Custom operational assessment & transparent pricing matrix.",
     },
     {
@@ -89,7 +89,7 @@ export default function HowItWorks() {
             href="/book-a-consultation"
             className="inline-flex items-center gap-2 bg-[#08A9E6] hover:bg-[#078FCC] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl shadow-xs transition-colors group"
           >
-            <span>Start Your 20-Minute Operational Assessment</span>
+            <span>Start Your 10-Minute Operational Assessment</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>

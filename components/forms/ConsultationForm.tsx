@@ -58,7 +58,7 @@ export default function ConsultationForm() {
             href="/book-a-consultation"
             className="inline-flex items-center justify-center gap-2 w-full bg-[#08A9E6] hover:bg-[#078FCC] text-white text-xs font-semibold py-2.5 px-4 rounded-lg shadow-sm transition-colors"
           >
-            <span>Book a 20-Min Zoom Consultation →</span>
+            <span>Book a 10-Min Zoom Consultation →</span>
           </Link>
         </div>
 
@@ -178,7 +178,7 @@ export default function ConsultationForm() {
             <option value="Back Office">Back Office / Data Operations</option>
             <option value="Sales & Growth">Sales Support & Lead Generation</option>
             <option value="Dedicated Teams">Dedicated Remote Teams</option>
-            <option value="Dispatch & Logistics">Dispatch & Logistics Support</option>
+            <option value="Dispatch & Logistics">Dispatch & Logistics Support (Save up to 60%)</option>
             <option value="Other">Other Custom Workflow</option>
           </select>
         </div>

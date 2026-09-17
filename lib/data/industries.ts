@@ -84,8 +84,8 @@ export const industriesData: IndustryItem[] = [
         description: "Same-day POD and invoice processing gets carriers paid days earlier."
       },
       {
-        title: "Scale Fleet Without Fixed Office Overhead",
-        description: "Add dispatch pods as you add trucks without leasing additional physical office space."
+        title: "Up to 60% Labor Cost Savings",
+        description: "Scale dispatch capacity as your fleet grows without leasing physical office space, paying payroll taxes, or incurring domestic overtime."
       }
     ],
     relevantServices: [
@@ -95,6 +95,10 @@ export const industriesData: IndustryItem[] = [
       { name: "Dedicated Remote Teams", slug: "dedicated-remote-teams" }
     ],
     faqs: [
+      {
+        question: "What price value and cost savings do carriers get?",
+        answer: "Carriers and freight brokerages typically achieve 50% to 60%+ in operational savings compared to in-house US dispatchers ($65K+ base salary plus overtime, benefits, and office space). Virtual Stack provides transparent, flat monthly pod rates with zero hidden fees."
+      },
       {
         question: "Can your dispatchers work with our TMS software?",
         answer: "Yes, our team operates within standard industry Transportation Management Systems (McLeod, TMW, Rose Rocket, Turvo) and proprietary load portals."

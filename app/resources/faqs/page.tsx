@@ -299,7 +299,7 @@ export default function FAQsPage() {
                 className="inline-flex items-center gap-2 bg-[#08A9E6] hover:bg-[#078FCC] text-white font-semibold text-xs px-5 py-2.5 rounded-xl shadow transition-colors"
               >
                 <Calendar className="w-4 h-4" />
-                <span>Ask an Expert in a Quick 20-Min Call</span>
+                <span>Ask an Expert in a Quick 10-Min Call</span>
               </Link>
             </div>
           </div>

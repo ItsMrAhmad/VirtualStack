@@ -17,7 +17,7 @@ export default function MidPageCTA() {
               Have a specific operational bottleneck or upcoming surge?
             </h3>
             <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
-              In a focused 20-minute consultation, we'll map your SOPs, estimate pod requirements, and deliver transparent pricing.
+              In a focused 10-minute consultation, we'll map your SOPs, estimate pod requirements, and deliver transparent pricing.
             </p>
           </div>
 

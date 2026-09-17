@@ -101,7 +101,7 @@ export default function CalendlyEmbed({ calendlyUrl, prefill }: CalendlyEmbedPro
             <div className="flex items-center gap-3 text-xs text-[#5F7183] mt-0.5">
               <span className="flex items-center gap-1">
                 <Clock className="w-3.5 h-3.5 text-[#08A9E6]" />
-                20 Mins
+                10 Mins
               </span>
               <span>•</span>
               <span className="flex items-center gap-1 text-emerald-600 font-medium">
@@ -298,7 +298,7 @@ export default function CalendlyEmbed({ calendlyUrl, prefill }: CalendlyEmbedPro
                 Consultation Confirmed!
               </h3>
               <p className="text-xs text-[#5F7183] mt-1 max-w-sm mx-auto">
-                We've scheduled your 20-minute operational discovery session. Calendar invitation and Zoom
+                We've scheduled your 10-minute operational discovery session. Calendar invitation and Zoom
                 details have been sent to <span className="font-semibold text-[#071A2A]">{formData.email}</span>.
               </p>
             </div>

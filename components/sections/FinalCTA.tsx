@@ -16,7 +16,7 @@ export default function FinalCTA() {
         </h2>
 
         <p className="text-sm sm:text-base text-[#94A3B8] max-w-xl mx-auto leading-relaxed">
-          Schedule a free 20-minute consultation. We'll examine your current workflow, identify quick operational
+          Schedule a free 10-minute consultation. We'll examine your current workflow, identify quick operational
           wins, and propose a dedicated solution tailored to your business.
         </p>
 

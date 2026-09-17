@@ -45,7 +45,7 @@ export default function ContactPage() {
                   Prefer to schedule directly?
                 </h3>
                 <p className="text-xs text-[#94A3B8] leading-relaxed">
-                  Skip the back-and-forth email replies. Choose a convenient 20-minute slot on our live calendar
+                  Skip the back-and-forth email replies. Choose a convenient 10-minute slot on our live calendar
                   and receive a Zoom meeting invitation automatically.
                 </p>
               </div>

@@ -44,15 +44,15 @@ export const industryHeroConfigs: Record<string, IndustryHeroData> = {
     h1Prefix: "24/7 Fleet Dispatch, ",
     h1Highlight: "Driver Coordination",
     h1Suffix: " & Load Tracking",
-    subheading: "Built for mid-size carriers, freight brokerages, and growing fleets.",
-    description: "Eliminate missed check-ins, unbilled detention fees, and dropped broker appointments. Our dedicated coordinators handle driver check calls, rate confirmations, and TMS updates so your trucks keep moving.",
+    subheading: "Built for mid-size carriers and freight brokerages — save up to 60% vs. domestic staffing.",
+    description: "Eliminate missed check-ins, unbilled detention fees, and soaring payroll overhead. Our dedicated coordinators handle driver check calls, rate confirmations, and TMS updates at flat, predictable rates.",
     stats: [
       {
-        value: "450+",
-        label: "Daily Loads Tracked",
-        icon: Clock,
-        iconBg: "bg-[#E0F2FE] text-[#0284C7]",
-        valueColor: "text-[#071A2A]"
+        value: "Up to 60%",
+        label: "Dispatch Cost Savings",
+        icon: TrendingUp,
+        iconBg: "bg-[#ECFDF5] text-[#059669]",
+        valueColor: "text-emerald-600"
       },
       {
         value: "< 3 Min",
@@ -65,8 +65,8 @@ export const industryHeroConfigs: Record<string, IndustryHeroData> = {
         value: "100%",
         label: "TMS Milestone Logging",
         icon: CheckCircle2,
-        iconBg: "bg-[#ECFDF5] text-[#059669]",
-        valueColor: "text-emerald-600"
+        iconBg: "bg-[#E0F2FE] text-[#0284C7]",
+        valueColor: "text-[#071A2A]"
       }
     ],
     primaryCtaText: "Get a Dispatch Coverage Quote",

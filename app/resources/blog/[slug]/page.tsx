@@ -269,7 +269,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                 Ready to benchmark your team&apos;s operational economics?
               </h4>
               <p className="text-xs text-[#5F7183]">
-                Schedule a 20-minute operational scoping call with our practice leads.
+                Schedule a 10-minute operational scoping call with our practice leads.
               </p>
             </div>
             <Link
