@@ -17,15 +17,15 @@ export default function OutsourcingModel() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[25%_center] md:object-[22%_center] lg:object-[18%_center] opacity-90 sm:opacity-95 scale-100 transition-opacity duration-300"
+          className="object-cover object-center opacity-30 lg:opacity-100 lg:object-contain lg:object-left transition-opacity duration-300"
         />
 
-        {/* Deep Navy Gradient on Right to make text readable while leaving the left graphic completely clear */}
+        {/* Deep Navy Gradient on Right for text readability while leaving the left graphic completely clear */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, transparent 0%, transparent 35%, rgba(7, 26, 42, 0.75) 55%, rgba(7, 26, 42, 0.94) 75%, rgba(7, 26, 42, 0.98) 100%)",
+              "linear-gradient(to right, transparent 0%, transparent 40%, rgba(7, 26, 42, 0.70) 56%, rgba(7, 26, 42, 0.95) 75%, rgba(7, 26, 42, 1) 100%)",
           }}
         />
 
@@ -34,7 +34,7 @@ export default function OutsourcingModel() {
           className="absolute inset-0 lg:hidden"
           style={{
             background:
-              "radial-gradient(ellipse at center, rgba(7, 26, 42, 0.70) 0%, rgba(7, 26, 42, 0.92) 100%)",
+              "radial-gradient(ellipse at center, rgba(7, 26, 42, 0.65) 0%, rgba(7, 26, 42, 0.92) 100%)",
           }}
         />
 
@@ -43,7 +43,7 @@ export default function OutsourcingModel() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(7, 26, 42, 0.85) 0%, transparent 20%, transparent 80%, rgba(7, 26, 42, 0.92) 100%)",
+              "linear-gradient(to bottom, rgba(7, 26, 42, 0.5) 0%, transparent 12%, transparent 88%, rgba(7, 26, 42, 0.6) 100%)",
           }}
         />
       </div>
