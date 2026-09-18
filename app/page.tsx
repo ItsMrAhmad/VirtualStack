@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "@/components/hero/HeroSection";
+import OutsourcingModel from "@/components/sections/OutsourcingModel";
 import ServicesShowcase from "@/components/sections/ServicesShowcase";
 import HowItWorks from "@/components/sections/HowItWorks";
 import MidPageCTA from "@/components/sections/MidPageCTA";
@@ -18,25 +19,28 @@ export default function HomePage() {
       {/* 1. Hero Section with Background Operations Imagery */}
       <HeroSection />
 
-      {/* 2. Services Showcase with Visual Pillar Cards */}
+      {/* 2. Modern Outsourcing Delivery Model Section */}
+      <OutsourcingModel />
+
+      {/* 3. Services Showcase with Visual Pillar Cards */}
       <ServicesShowcase />
 
-      {/* 3. How It Works: 3-Step Consultative Process */}
+      {/* 4. How It Works: 3-Step Consultative Process */}
       <HowItWorks />
 
-      {/* 4. Mid-Page Conversion Consultation Strip */}
+      {/* 5. Mid-Page Conversion Consultation Strip */}
       <MidPageCTA />
 
-      {/* 5. Industry Specific Capabilities */}
+      {/* 6. Industry Specific Capabilities */}
       <IndustryGrid />
 
-      {/* 6. Client Testimonials */}
+      {/* 7. Client Testimonials */}
       <TestimonialsPlaceholder />
 
-      {/* 7. High-Impact Closing CTA */}
+      {/* 8. High-Impact Closing CTA */}
       <FinalCTA />
 
-      {/* 8. Dedicated Footer Snap Slide */}
+      {/* 9. Dedicated Footer Snap Slide */}
       <div className="home-snap-section w-full snap-start snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
         <Footer />
       </div>
