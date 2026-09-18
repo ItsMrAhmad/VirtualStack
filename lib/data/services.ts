@@ -126,7 +126,7 @@ export const servicesData: ServiceItem[] = [
       },
       {
         question: "What ticketing systems and CRM tools do your agents use?",
-        answer: "We work directly inside your existing tools — including Zendesk, Freshdesk, Salesforce, HubSpot, Gorgias, Intercom, and custom internal portals."
+        answer: "We work directly inside your existing tools - including Zendesk, Freshdesk, Salesforce, HubSpot, Gorgias, Intercom, and custom internal portals."
       },
       {
         question: "How do you guarantee quality and tone consistency?",
@@ -141,7 +141,7 @@ export const servicesData: ServiceItem[] = [
     pillarName: "Customer Support",
     tagline: "Unify voice, chat, email, and social customer interactions seamlessly.",
     shortDescription: "Enterprise-grade inbound and outbound contact center infrastructure powered by cloud telephony and multi-skilled representatives.",
-    overview: "Modern buyers expect instant, context-aware answers across every communication touchpoint. Virtual Stack deploys dedicated, multi-skilled contact center agents equipped with cloud telephony, intelligent IVR routing, and synchronized multi-channel ticketing—eliminating hold times, queue abandonment, and customer churn.",
+    overview: "Modern buyers expect instant, context-aware answers across every communication touchpoint. Virtual Stack deploys dedicated, multi-skilled contact center agents equipped with cloud telephony, intelligent IVR routing, and synchronized multi-channel ticketing - eliminating hold times, queue abandonment, and customer churn.",
     challenges: [
       {
         title: "Fragmented Communication Channels",
@@ -809,7 +809,7 @@ export const servicesData: ServiceItem[] = [
     pillarName: "Sales & Growth",
     tagline: "Turn warm interest into confirmed discovery calls on your calendar.",
     shortDescription: "Professional phone and email outreach that engages decision-makers and books qualified meetings directly for your sales team.",
-    overview: "Generating interest is only half the battle — locking down a confirmed meeting is what drives revenue. Virtual Stack’s appointment setters engage prospective clients professionally, answer initial questions, handle objections, and secure confirmed appointments directly on your calendar.",
+    overview: "Generating interest is only half the battle - locking down a confirmed meeting is what drives revenue. Virtual Stack’s appointment setters engage prospective clients professionally, answer initial questions, handle objections, and secure confirmed appointments directly on your calendar.",
     challenges: [
       {
         title: "High Meeting No-Show Rates",
@@ -975,7 +975,7 @@ export const servicesData: ServiceItem[] = [
       },
       {
         title: "Dedicated, Non-Shared Staff",
-        description: "Your team members work 100% exclusively on your business — never split across multiple accounts."
+        description: "Your team members work 100% exclusively on your business - never split across multiple accounts."
       },
       {
         title: "Turnkey Facilities & IT Management",

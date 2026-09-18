@@ -85,7 +85,7 @@ export default function CaseStudiesPage() {
                   <div className="p-3.5 rounded-xl bg-white/90 border-l-4 border-[#08A9E6] text-xs italic text-[#5F7183] space-y-1">
                     <p>&ldquo;{cs.testimonialQuote.quote}&rdquo;</p>
                     <span className="block not-italic font-bold text-[#071A2A] text-[11px]">
-                      — {cs.testimonialQuote.author}, {cs.testimonialQuote.title}
+                      - {cs.testimonialQuote.author}, {cs.testimonialQuote.title}
                     </span>
                   </div>
                 )}

@@ -73,7 +73,7 @@ export default function OutsourcingModel() {
             {/* Concise, Scannable Body Copy (Short & Engaging) */}
             <p className="text-xs sm:text-sm text-slate-200 leading-relaxed drop-shadow-sm max-w-lg">
               We replace fragmented call centers with <strong className="text-white font-semibold">dedicated talent pods</strong> that
-              operate directly inside your software and SOPs—giving you 24/7 operational coverage at up to 60% lower cost.
+              operate directly inside your software and SOPs - giving you 24/7 operational coverage at up to 60% lower cost.
             </p>
 
             {/* Key Assurance Indicators */}

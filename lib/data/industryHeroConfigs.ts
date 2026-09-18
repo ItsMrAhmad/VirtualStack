@@ -44,7 +44,7 @@ export const industryHeroConfigs: Record<string, IndustryHeroData> = {
     h1Prefix: "24/7 Fleet Dispatch, ",
     h1Highlight: "Driver Coordination",
     h1Suffix: " & Load Tracking",
-    subheading: "Built for mid-size carriers and freight brokerages — save up to 60% vs. domestic staffing.",
+    subheading: "Built for mid-size carriers and freight brokerages - save up to 60% vs. domestic staffing.",
     description: "Eliminate missed check-ins, unbilled detention fees, and soaring payroll overhead. Our dedicated coordinators handle driver check calls, rate confirmations, and TMS updates at flat, predictable rates.",
     stats: [
       {

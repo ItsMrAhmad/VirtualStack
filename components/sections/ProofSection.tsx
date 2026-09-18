@@ -78,7 +78,7 @@ export default function ProofSection() {
                 <div className="mt-6 pt-5 border-t border-[#DDE6ED] text-xs italic text-[#5F7183] bg-white/70 p-4 rounded-xl">
                   "{cs.testimonialQuote.quote}"
                   <span className="block not-italic font-bold text-[#071A2A] mt-2">
-                    — {cs.testimonialQuote.author}, {cs.testimonialQuote.title}
+                    - {cs.testimonialQuote.author}, {cs.testimonialQuote.title}
                   </span>
                 </div>
               )}

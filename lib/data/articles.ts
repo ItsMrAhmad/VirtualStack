@@ -163,7 +163,7 @@ export const articlesData: Article[] = [
         },
       ],
       conclusion:
-        "Outbound is not dead—generic spam is. A dedicated prospecting pod integrated into your sales stack delivers reliable pipeline month after month at a fraction of domestic SDR recruiting costs.",
+        "Outbound is not dead - generic spam is. A dedicated prospecting pod integrated into your sales stack delivers reliable pipeline month after month at a fraction of domestic SDR recruiting costs.",
     },
   },
   {
@@ -204,7 +204,7 @@ export const articlesData: Article[] = [
         },
       ],
       conclusion:
-        "Around-the-around logistics coverage is no longer an expensive enterprise luxury—it is the baseline requirement for winning and retaining top-tier shippers.",
+        "Around-the-around logistics coverage is no longer an expensive enterprise luxury - it is the baseline requirement for winning and retaining top-tier shippers.",
     },
   },
   {
@@ -286,7 +286,7 @@ export const articlesData: Article[] = [
         },
       ],
       conclusion:
-        "Robust operational security doesn't impede team agility—it provides enterprise executives with the confidence to scale fearlessly.",
+        "Robust operational security doesn't impede team agility - it provides enterprise executives with the confidence to scale fearlessly.",
     },
   },
   {
@@ -350,7 +350,7 @@ export const articlesData: Article[] = [
     tags: ["HIPAA", "FinTech", "Regulatory Compliance", "Audit Ready"],
     content: {
       introduction:
-        "Handling Protected Health Information (PHI) or non-public financial records leaves zero margin for operational error. Healthcare providers and FinTech startups often assume outsourcing is unviable due to regulatory hurdles—until they inspect audited compliance frameworks.",
+        "Handling Protected Health Information (PHI) or non-public financial records leaves zero margin for operational error. Healthcare providers and FinTech startups often assume outsourcing is unviable due to regulatory hurdles - until they inspect audited compliance frameworks.",
       keyTakeaways: [
         "BAA (Business Associate Agreement) sign-offs ensure full legal alignment for HIPAA-regulated workflows.",
         "Role-based access controls mask sensitive SSNs, medical codes, and credit card numbers from unauthorized view.",
@@ -432,7 +432,7 @@ export const articlesData: Article[] = [
     tags: ["Cost Analysis", "Executive Strategy", "TCO", "ROI"],
     content: {
       introduction:
-        "When comparing domestic hiring against dedicated offshore delivery pods, most leaders look exclusively at base wages. This naive comparison misses over 40% of the true fully burdened cost of domestic employment—including recruiting fees, equipment, taxes, healthcare, and executive management time.",
+        "When comparing domestic hiring against dedicated offshore delivery pods, most leaders look exclusively at base wages. This naive comparison misses over 40% of the true fully burdened cost of domestic employment - including recruiting fees, equipment, taxes, healthcare, and executive management time.",
       keyTakeaways: [
         "Fully burdened domestic headcount typically costs 1.35x to 1.50x base annual salary.",
         "Recruitment cycle time drops from 45+ days domestically to under 14 days with managed talent pods.",
@@ -446,7 +446,7 @@ export const articlesData: Article[] = [
         },
         {
           heading: "Reinvesting Operational Savings into Growth",
-          body: "Forward-thinking CFOs leverage the savings generated through managed delivery pods to double down on product engineering, sales acquisition, and strategic R&D—turning operational efficiency into an unfair market advantage.",
+          body: "Forward-thinking CFOs leverage the savings generated through managed delivery pods to double down on product engineering, sales acquisition, and strategic R&D - turning operational efficiency into an unfair market advantage.",
         },
       ],
       conclusion:

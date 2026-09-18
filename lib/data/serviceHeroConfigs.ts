@@ -628,7 +628,7 @@ export const serviceHeroConfigs: Record<string, ServiceHeroData> = {
     h1Highlight: "Employer of Record",
     h1Suffix: " & Facility Infrastructure",
     subheading: "Build an offshore operational hub without establishing foreign corporate subsidiaries.",
-    description: "Expand your global team with zero legal or administrative friction. We act as the legal Employer of Record—handling local labor contracts, payroll, benefits, and physical facility security while you manage daily work output.",
+    description: "Expand your global team with zero legal or administrative friction. We act as the legal Employer of Record - handling local labor contracts, payroll, benefits, and physical facility security while you manage daily work output.",
     stats: [
       {
         value: "0",

@@ -36,7 +36,7 @@ export const industriesData: IndustryItem[] = [
     shortName: "Logistics",
     headline: "24/7 Fleet Dispatch, Driver Coordination & Load Tracking",
     tagline: "Dedicated dispatch pods managing night, weekend, and peak freight volumes.",
-    description: "Virtual Stack provides dedicated logistics coordinators and dispatchers around the clock to manage load scheduling, driver check calls, detention tracking, and rate confirmations—preventing missed check-ins, unbilled detention fees, and dropped broker appointments.",
+    description: "Virtual Stack provides dedicated logistics coordinators and dispatchers around the clock to manage load scheduling, driver check calls, detention tracking, and rate confirmations - preventing missed check-ins, unbilled detention fees, and dropped broker appointments.",
     iconName: "Truck",
     challenges: [
       {
