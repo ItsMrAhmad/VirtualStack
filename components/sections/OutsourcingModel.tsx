@@ -25,7 +25,7 @@ export default function OutsourcingModel() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, transparent 0%, transparent 40%, rgba(7, 26, 42, 0.70) 56%, rgba(7, 26, 42, 0.95) 75%, rgba(7, 26, 42, 1) 100%)",
+              "linear-gradient(to right, transparent 0%, transparent 44%, rgba(7, 26, 42, 0.70) 58%, rgba(7, 26, 42, 0.95) 75%, rgba(7, 26, 42, 1) 100%)",
           }}
         />
 
