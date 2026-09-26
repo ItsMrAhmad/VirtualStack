@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MessageSquare,
   X,
@@ -123,11 +124,15 @@ export default function ChatbotWidget() {
           <div className="bg-[#071A2A] px-4 py-3.5 border-b border-[#08A9E6]/30 text-white shrink-0">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2.5">
-                <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-[#08A9E6] to-[#071A2A] flex items-center justify-center p-0.5 shadow-sm">
-                  <div className="w-full h-full bg-[#071A2A] rounded-[10px] flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-[#08A9E6]" />
-                  </div>
-                  <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#12C98A] border-2 border-[#071A2A]" />
+                <div className="relative w-9 h-9 rounded-xl bg-white flex items-center justify-center p-1.5 shadow-sm border border-[#08A9E6]/30 shrink-0">
+                  <Image
+                    src="/icon.png"
+                    alt="Virtual Stack Logo"
+                    width={26}
+                    height={26}
+                    className="w-full h-full object-contain"
+                  />
+                  <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#12C98A] border-2 border-[#071A2A]" />
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
@@ -326,14 +331,18 @@ export default function ChatbotWidget() {
         aria-label={isOpen ? "Close Virtual Stack Assistant" : "Open Virtual Stack Assistant"}
         className="pointer-events-auto flex items-center gap-2.5 bg-[#071A2A] hover:bg-[#0C1E30] text-white border border-[#08A9E6]/40 hover:border-[#08A9E6] rounded-full p-2.5 sm:px-4 sm:py-2.5 shadow-[0_10px_25px_rgba(7,26,42,0.35)] hover:shadow-[0_10px_30px_rgba(8,169,230,0.3)] transition-all duration-200 group"
       >
-        <div className="relative w-8 h-8 rounded-full bg-gradient-to-br from-[#08A9E6] to-[#071A2A] flex items-center justify-center p-0.5 shrink-0">
-          <div className="w-full h-full bg-[#071A2A] rounded-full flex items-center justify-center">
-            {isOpen ? (
-              <X className="w-4 h-4 text-[#08A9E6]" />
-            ) : (
-              <MessageSquare className="w-4 h-4 text-[#08A9E6]" />
-            )}
-          </div>
+        <div className="relative w-8 h-8 rounded-full bg-white flex items-center justify-center p-1.5 shrink-0 shadow-sm border border-[#08A9E6]/30">
+          {isOpen ? (
+            <X className="w-4 h-4 text-[#071A2A]" />
+          ) : (
+            <Image
+              src="/icon.png"
+              alt="Virtual Stack"
+              width={20}
+              height={20}
+              className="w-full h-full object-contain"
+            />
+          )}
           {!isOpen && (
             <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-[#12C98A] border-2 border-[#071A2A]" />
           )}
