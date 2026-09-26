@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileStickyCTA from "@/components/layout/MobileStickyCTA";
 import ScrollSnapDelegate from "@/components/layout/ScrollSnapDelegate";
+import ChatbotWidget from "@/components/chatbot/ChatbotWidget";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -157,6 +158,7 @@ export default function RootLayout({
         <main className="flex-1 pt-[var(--header-height)]">{children}</main>
         <Footer />
         <MobileStickyCTA />
+        <ChatbotWidget />
       </body>
     </html>
   );
