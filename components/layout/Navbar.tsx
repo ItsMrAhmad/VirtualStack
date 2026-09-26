@@ -25,6 +25,39 @@ import { servicePillars } from "@/lib/data/services";
 import { industriesData } from "@/lib/data/industries";
 import { cn } from "@/lib/utils";
 
+const RESOURCE_LINKS = [
+  {
+    href: "/resources/faqs",
+    title: "Frequently Asked Questions",
+    desc: "Answers on onboarding & security",
+  },
+  {
+    href: "/case-studies",
+    title: "Outcomes & Case Studies",
+    desc: "Proven operational frameworks",
+  },
+  {
+    href: "/resources/blog",
+    title: "Insights & Articles",
+    desc: "Best practices in outsourcing",
+  },
+];
+
+function getPillarIcon(id: string) {
+  switch (id) {
+    case "customer-experience":
+      return <Headphones className="w-5 h-5 text-[#08A9E6]" />;
+    case "back-office":
+      return <Layers className="w-5 h-5 text-[#08A9E6]" />;
+    case "sales-growth":
+      return <TrendingUp className="w-5 h-5 text-[#08A9E6]" />;
+    case "dedicated-teams":
+      return <Users className="w-5 h-5 text-[#08A9E6]" />;
+    default:
+      return <CheckCircle2 className="w-5 h-5 text-[#08A9E6]" />;
+  }
+}
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -49,7 +82,6 @@ export default function Navbar() {
       localStorage.setItem("theme", "light");
     }
   };
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,21 +110,6 @@ export default function Navbar() {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
-
-  const getPillarIcon = (id: string) => {
-    switch (id) {
-      case "customer-experience":
-        return <Headphones className="w-5 h-5 text-[#08A9E6]" />;
-      case "back-office":
-        return <Layers className="w-5 h-5 text-[#08A9E6]" />;
-      case "sales-growth":
-        return <TrendingUp className="w-5 h-5 text-[#08A9E6]" />;
-      case "dedicated-teams":
-        return <Users className="w-5 h-5 text-[#08A9E6]" />;
-      default:
-        return <CheckCircle2 className="w-5 h-5 text-[#08A9E6]" />;
-    }
-  };
 
   return (
     <div id="site-navbar" className="sticky top-0 z-50 w-full">
@@ -142,12 +159,19 @@ export default function Navbar() {
             {/* Brand Logo */}
             <Link href="/" className="flex items-center group py-0.5" aria-label="Virtual Stack Homepage">
               <Image
-                src={mounted && isDark ? "/logo-white.png" : "/logo.png"}
+                src="/logo.png"
                 alt="Virtual Stack"
                 width={140}
                 height={65}
                 priority
-                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02] dark:hidden"
+              />
+              <Image
+                src="/logo-white.png"
+                alt="Virtual Stack"
+                width={140}
+                height={65}
+                className="h-10 sm:h-11 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02] hidden dark:block"
               />
             </Link>
 
@@ -335,30 +359,17 @@ export default function Navbar() {
                 {activeDropdown === "resources" && (
                   <div className="absolute top-full left-0 w-[260px] pt-2.5 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                     <div className="bg-white rounded-xl shadow-xl border border-[#DDE6ED] p-3 space-y-1">
-                      <Link
-                        href="/resources/faqs"
-                        onClick={() => setActiveDropdown(null)}
-                        className="block p-2.5 rounded-lg hover:bg-[#F7FAFC] text-sm text-[#071A2A] hover:text-[#08A9E6] transition-colors"
-                      >
-                        <div className="font-semibold">Frequently Asked Questions</div>
-                        <div className="text-xs text-[#5F7183]">Answers on onboarding & security</div>
-                      </Link>
-                      <Link
-                        href="/case-studies"
-                        onClick={() => setActiveDropdown(null)}
-                        className="block p-2.5 rounded-lg hover:bg-[#F7FAFC] text-sm text-[#071A2A] hover:text-[#08A9E6] transition-colors"
-                      >
-                        <div className="font-semibold">Outcomes & Case Studies</div>
-                        <div className="text-xs text-[#5F7183]">Proven operational frameworks</div>
-                      </Link>
-                      <Link
-                        href="/resources/blog"
-                        onClick={() => setActiveDropdown(null)}
-                        className="block p-2.5 rounded-lg hover:bg-[#F7FAFC] text-sm text-[#071A2A] hover:text-[#08A9E6] transition-colors"
-                      >
-                        <div className="font-semibold">Insights & Articles</div>
-                        <div className="text-xs text-[#5F7183]">Best practices in outsourcing</div>
-                      </Link>
+                      {RESOURCE_LINKS.map((res) => (
+                        <Link
+                          key={res.href}
+                          href={res.href}
+                          onClick={() => setActiveDropdown(null)}
+                          className="block p-2.5 rounded-lg hover:bg-[#F7FAFC] text-sm text-[#071A2A] hover:text-[#08A9E6] transition-colors"
+                        >
+                          <div className="font-semibold">{res.title}</div>
+                          <div className="text-xs text-[#5F7183]">{res.desc}</div>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 )}

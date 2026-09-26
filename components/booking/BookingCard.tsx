@@ -38,9 +38,9 @@ export default function BookingCard() {
 
       {/* What to Expect in Call */}
       <div className="space-y-2.5">
-        <h4 className="text-xs font-bold text-[#071A2A] uppercase tracking-wider font-heading">
+        <h2 className="text-xs font-bold text-[#071A2A] uppercase tracking-wider font-heading">
           What we cover in this session:
-        </h4>
+        </h2>
         <div className="space-y-2">
           {agendaItems.map((item, idx) => (
             <div key={idx} className="flex items-start gap-2.5">

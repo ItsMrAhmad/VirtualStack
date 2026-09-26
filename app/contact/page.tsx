@@ -4,14 +4,17 @@ import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, ShieldCheck, Calendar, ArrowRight } from "lucide-react";
 import { companyData } from "@/lib/data/company";
 import ConsultationForm from "@/components/forms/ConsultationForm";
-
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "Contact Us & Inquiries",
+import { buildMetadata } from "@/lib/seo";
+import JsonLd, { getContactPageJsonLd } from "@/components/seo/JsonLd";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Contact Us",
   description:
-    "Get in touch with Virtual Stack. Call +1 (888) 910-0868 or send an operational inquiry to discuss dedicated customer care, back-office operations, and remote teams.",
-};
+    "Get in touch with Virtual Stack. Call +1 (888) 910-0868 or send an operational inquiry to discuss dedicated customer care, back-office, and dispatch teams.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -20,6 +23,9 @@ export default function ContactPage() {
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
+      <link rel="preconnect" href="https://assets.calendly.com" />
+      <link rel="preconnect" href="https://calendly.com" />
+      <JsonLd data={getContactPageJsonLd()} />
       {/* Slide 1: Direct Contact & Instant Scheduling */}
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-0 sm:my-auto w-full max-w-5xl mx-auto space-y-6">

@@ -209,11 +209,6 @@ body:has([id$="-scroll-container"]) {
   height: 100% !important;
 }
 
-main:has([id$="-scroll-container"]) + footer,
-main:has([id$="-scroll-container"]) ~ footer {
-  display: none !important;
-}
-
 body:has([id$="-scroll-container"]) #site-navbar {
   position: fixed;
   top: 0;

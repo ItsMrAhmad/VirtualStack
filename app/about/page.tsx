@@ -20,11 +20,14 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "About Virtual Stack | Our Story, Mission & Values",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "About Us: Our Story, Mission & Values",
   description:
-    "Learn about Virtual Stack's history since 2011, our North American corporate headquarters in Calgary, AB, and our commitment to operational quality.",
-};
+    "Learn about Virtual Stack's history since 2011, our North American corporate headquarters in Calgary, AB, and our commitment to operational excellence.",
+  path: "/about",
+});
 
 export default function AboutPage() {
   const values = [

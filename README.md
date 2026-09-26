@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Virtual Stack Website
 
-## Getting Started
+Official marketing website for **Virtual Stack** — modern B2B outsourcing, dedicated customer support, 24/7 fleet dispatch, back-office operations, and sales support.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework**: Next.js 16.3 (App Router, Turbopack)
+- **UI & Runtime**: React 19.2, TypeScript, Tailwind CSS 4
+- **Deployment**: Cloudflare Pages (`output: "export"`, static HTML/CSS/JS)
+- **Typography**: Manrope (headings) & Inter (body) via `next/font/google`
+- **Brand Colors**:
+  - Primary Navy: `#071A2A`
+  - Accent Cyan: `#08A9E6`
+  - Status Green: `#12C98A`
+
+## Local Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build production static export
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The production output is generated into the `out/` directory.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment & Hosting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The repository is hosted on GitHub: `https://github.com/ItsMrAhmad/VirtualStack`.
 
-## Learn More
+- Every push to the `main` branch automatically triggers a build and deployment on **Cloudflare Pages**.
+- Canonical site domain: `https://virtualstack.us`.
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `NEXT_PUBLIC_CALENDLY_URL`: URL for embedding the Calendly/Zoom consultation booking widget (e.g. `https://calendly.com/virtualstack-consultation`). If not set, the consultation forms operate in demonstration mode.

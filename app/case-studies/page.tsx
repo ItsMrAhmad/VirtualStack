@@ -7,11 +7,14 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "Operational Case Studies & Proof",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Outsourcing Case Studies & Results",
   description:
-    "Explore how Virtual Stack helped North American businesses solve operational challenges, scale coverage, and reduce costs through structured frameworks.",
-};
+    "Explore how Virtual Stack helped North American businesses solve operational challenges, scale coverage, and reduce costs through dedicated talent pods.",
+  path: "/case-studies",
+});
 
 export default function CaseStudiesPage() {
   return (

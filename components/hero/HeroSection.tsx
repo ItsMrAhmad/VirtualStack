@@ -1,29 +1,12 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Calendar, PhoneCall, ChevronDown } from "lucide-react";
 import OperationsDiagram from "./OperationsDiagram";
+import RotatingText from "./RotatingText";
 import { companyData } from "@/lib/data/company";
 
-const rotatingUseCases = [
-  "24/7 Taxi & Fleet Dispatch",
-  "B2B Lead Generation & Telesales",
-  "Omnichannel Customer Support",
-  "Back-Office Processing & KYC",
-  "Dedicated Remote Virtual Assistants",
-];
-
 export default function HeroSection() {
-  const [currentCaseIndex, setCurrentCaseIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentCaseIndex((prev) => (prev + 1) % rotatingUseCases.length);
-    }, 2800);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#071A2A] text-white border-b border-[#1A2E40]">
@@ -75,12 +58,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Dynamic Rotating Subheadline */}
-            <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#08A9E6] min-h-[1.5rem]">
-              <span className="text-[#94A3B8] font-normal">Active Operations:</span>
-              <span className="key-rotating transition-all duration-300 bg-[#0A2238] px-2 py-0.5 rounded-md border border-[#08A9E6]/30 text-[#08A9E6] font-bold">
-                {rotatingUseCases[currentCaseIndex]}
-              </span>
-            </div>
+            <RotatingText />
 
             {/* Supporting Copy */}
             <p className="text-sm sm:text-base text-[#94A3B8] max-w-xl font-normal leading-relaxed">

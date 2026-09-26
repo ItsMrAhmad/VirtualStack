@@ -38,20 +38,19 @@ export async function generateStaticParams() {
   }));
 }
 
+import { buildMetadata } from "@/lib/seo";
+import JsonLd, { getServiceJsonLd, getFaqPageJsonLd } from "@/components/seo/JsonLd";
+
 export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
   const { slug } = await params;
   const service = servicesData.find((s) => s.slug === slug);
   if (!service) return {};
 
-  return {
-    title: `${service.name} | Virtual Stack Operations`,
+  return buildMetadata({
+    title: service.name,
     description: service.shortDescription,
-    openGraph: {
-      title: `${service.name} | Virtual Stack`,
-      description: service.shortDescription,
-      url: `https://virtualstack.us/services/${service.slug}`,
-    },
-  };
+    path: `/services/${service.slug}`,
+  });
 }
 
 export default async function ServiceDetailPage({ params }: ServicePageProps) {
@@ -60,6 +59,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
 
   if (!service) {
     notFound();
+  }
+
+  const schemaData: any[] = [...getServiceJsonLd(service)];
+  if (service.faqs && service.faqs.length > 0) {
+    schemaData.push(getFaqPageJsonLd(service.faqs));
   }
 
   // Related services in the same pillar
@@ -140,6 +144,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
+      <JsonLd data={schemaData} />
       {/* Slide 1: Unified Reusable Hero Template */}
       <IndustryServiceHero
         badge={config.badge}

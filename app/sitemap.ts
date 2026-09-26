@@ -1,13 +1,15 @@
 import { MetadataRoute } from "next";
 import { servicesData } from "@/lib/data/services";
 import { industriesData } from "@/lib/data/industries";
+import { articlesData } from "@/lib/data/articles";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://virtualstack.us";
+  const SITE_UPDATED = new Date("2026-09-26");
 
-  // Core static pages
+  // Core static pages (excluding /resources, /privacy, /terms)
   const staticRoutes = [
     "",
     "/services",
@@ -15,35 +17,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/why-virtual-stack",
     "/about",
     "/case-studies",
-    "/resources",
     "/resources/faqs",
     "/resources/blog",
     "/contact",
     "/book-a-consultation",
-    "/privacy",
-    "/terms",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: route === "" ? 1.0 : 0.8,
+    lastModified: SITE_UPDATED,
   }));
 
   // Dynamic service pages
   const serviceRoutes = servicesData.map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
+    lastModified: SITE_UPDATED,
   }));
 
   // Dynamic industry pages
   const industryRoutes = industriesData.map((ind) => ({
     url: `${baseUrl}/industries/${ind.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
+    lastModified: SITE_UPDATED,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...industryRoutes];
+  // Dynamic blog articles (with stable parsed dates)
+  const blogRoutes = articlesData.map((article) => {
+    const parsedDate = new Date(article.date);
+    return {
+      url: `${baseUrl}/resources/blog/${article.slug}`,
+      lastModified: isNaN(parsedDate.getTime()) ? SITE_UPDATED : parsedDate,
+    };
+  });
+
+  return [...staticRoutes, ...serviceRoutes, ...industryRoutes, ...blogRoutes];
 }

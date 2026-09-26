@@ -1,11 +1,15 @@
 import React from "react";
 import type { Metadata } from "next";
+import Footer from "@/components/layout/Footer";
 import { companyData } from "@/lib/data/company";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Virtual Stack",
-  description: "Virtual Stack's corporate privacy policy and data governance practices.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Privacy Policy",
+  description:
+    "Review Virtual Stack's corporate privacy policy, PIPEDA and US data protection standards, client confidentiality, and operational security governance.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
@@ -62,6 +66,7 @@ export default function PrivacyPage() {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

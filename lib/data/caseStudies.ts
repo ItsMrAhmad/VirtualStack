@@ -50,7 +50,7 @@ export const caseStudiesData: CaseStudyItem[] = [
     testimonialQuote: {
       quote:
         "Virtual Stack gave us complete peace of mind on nights and weekends. Our brokers arrive in the morning with all loads tracked and paperwork organized.",
-      author: "[Client VP of Operations]",
+      author: "VP of Operations",
       title: "Commercial Freight Brokerage",
     },
     isClientPlaceholder: false,
@@ -85,7 +85,7 @@ export const caseStudiesData: CaseStudyItem[] = [
     testimonialQuote: {
       quote:
         "Having a trained team ready to handle our peak volume allowed our internal marketing and product teams to focus purely on driving sales.",
-      author: "[Director of Customer Care]",
+      author: "Director of Customer Care",
       title: "DTC Apparel Brand",
     },
     isClientPlaceholder: false,
@@ -120,7 +120,7 @@ export const caseStudiesData: CaseStudyItem[] = [
     testimonialQuote: {
       quote:
         "Our developers stopped getting interrupted by basic user requests. Our sprint velocity improved within the first three weeks of handover.",
-      author: "[Chief Technology Officer]",
+      author: "Chief Technology Officer",
       title: "Cloud Workflow Platform",
     },
     isClientPlaceholder: false,
@@ -155,7 +155,7 @@ export const caseStudiesData: CaseStudyItem[] = [
     testimonialQuote: {
       quote:
         "Virtual Stack’s accuracy and security controls gave our compliance team complete confidence from day one.",
-      author: "[Head of Underwriting Operations]",
+      author: "Head of Underwriting Operations",
       title: "Commercial Lending Group",
     },
     isClientPlaceholder: false,

@@ -95,9 +95,9 @@ export default function CalendlyEmbed({ calendlyUrl, prefill }: CalendlyEmbedPro
             />
           </div>
           <div>
-            <h4 className="text-sm font-bold text-[#071A2A] font-heading">
+            <h2 className="text-sm font-bold text-[#071A2A] font-heading">
               Virtual Stack Discovery Call
-            </h4>
+            </h2>
             <div className="flex items-center gap-3 text-xs text-[#5F7183] mt-0.5">
               <span className="flex items-center gap-1">
                 <Clock className="w-3.5 h-3.5 text-[#08A9E6]" />

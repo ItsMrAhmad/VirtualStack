@@ -18,11 +18,14 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "Services & Operational Solutions",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Outsourcing Services: Support, Back-Office & Sales",
   description:
-    "Explore Virtual Stack's 4 core service pillars: Customer Support, Back Office Operations, Sales Support, and Dedicated Remote Teams.",
-};
+    "Explore Virtual Stack's 4 core service pillars: Customer Support, Back-Office Operations, B2B Sales Prospecting, and Dedicated Remote Talent Pods.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   const getPillarIcon = (id: string) => {

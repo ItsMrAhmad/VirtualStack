@@ -5,17 +5,14 @@ import CalendlyEmbed from "@/components/booking/CalendlyEmbed";
 
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "Book a Free Consultation | Virtual Stack",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Book a Free Consultation",
   description:
-    "Schedule a consultation with Virtual Stack to discuss customer support, back-office operations, dedicated teams, and outsourcing solutions.",
-  openGraph: {
-    title: "Book a Free Consultation | Virtual Stack",
-    description:
-      "Schedule a consultation with Virtual Stack to discuss customer support, back-office operations, dedicated teams, and outsourcing solutions.",
-    url: "https://virtualstack.us/book-a-consultation",
-  },
-};
+    "Schedule a 10-minute scoping call with Virtual Stack leadership to discuss customer support, back-office operations, fleet dispatch, and custom pricing.",
+  path: "/book-a-consultation",
+});
 
 export default function BookAConsultationPage() {
   return (
@@ -24,6 +21,8 @@ export default function BookAConsultationPage() {
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-[#F7FAFC] text-[#0B1724] outline-none"
     >
+      <link rel="preconnect" href="https://assets.calendly.com" />
+      <link rel="preconnect" href="https://calendly.com" />
       {/* Slide 1: Discovery & Calendly Embed */}
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-start lg:justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-28 pb-8 relative z-10 overflow-y-auto bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="w-full max-w-7xl mx-auto my-auto py-2">

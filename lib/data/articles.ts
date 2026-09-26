@@ -20,6 +20,11 @@ export interface Article {
   image: string;
   featured: boolean;
   tags: string[];
+  relatedService?: {
+    name: string;
+    href: string;
+    description: string;
+  };
   content: {
     introduction: string;
     keyTakeaways: string[];
@@ -42,6 +47,11 @@ export const articlesData: Article[] = [
   {
     id: "customer-support-playbook-2026",
     slug: "customer-support-playbook-2026",
+    relatedService: {
+      name: "Customer Support Outsourcing",
+      href: "/services/customer-support",
+      description: "Deploy dedicated omnichannel support pods with 24/7 coverage, high CSAT, and fast response times.",
+    },
     title: "The 2026 Customer Support Playbook: Balancing Human Empathy with AI Assist",
     excerpt:
       "How high-growth North American businesses deploy blended tier-1 AI triage with dedicated human escalation pods to achieve sub-60-second response times and 96%+ CSAT.",
@@ -87,6 +97,11 @@ export const articlesData: Article[] = [
   {
     id: "scaling-back-office-operations-zero-sla-slippage",
     slug: "scaling-back-office-operations-zero-sla-slippage",
+    relatedService: {
+      name: "Back-Office Operations",
+      href: "/services/back-office-operations",
+      description: "High-accuracy transaction processing, billing, verification, and exception management.",
+    },
     title: "Scaling Transactional Back-Office Operations with Zero SLA Slippage",
     excerpt:
       "A structural blueprint for high-volume invoice processing, claims review, and document indexing workflows with dual-audited quality verification.",
@@ -128,6 +143,11 @@ export const articlesData: Article[] = [
   {
     id: "b2b-outbound-sdr-pods-vs-fragmented-agencies",
     slug: "b2b-outbound-sdr-pods-vs-fragmented-agencies",
+    relatedService: {
+      name: "Lead Generation & Telesales",
+      href: "/services/lead-generation",
+      description: "Dedicated outbound prospecting pods focused on high-conversion B2B pipeline generation.",
+    },
     title: "Cold Outbound & Appointment Setting: Why Dedicated Pods Outperform Fragmented SDRs",
     excerpt:
       "Breaking down the mechanics of domain-warmed multichannel outreach, precision ICP list enrichment, and high-conversion qualification frameworks.",
@@ -169,6 +189,11 @@ export const articlesData: Article[] = [
   {
     id: "24-7-fleet-dispatch-sla-architecture",
     slug: "24-7-fleet-dispatch-sla-architecture",
+    relatedService: {
+      name: "Dispatch & Logistics Outsourcing",
+      href: "/industries/dispatch-logistics",
+      description: "24/7 load tracking, driver dispatch, route management, and emergency carrier rerouting.",
+    },
     title: "24/7 Fleet Dispatch Architecture: Reducing Missed Bookings to Under 0.5%",
     excerpt:
       "Managing overnight track & trace, driver check calls, and emergency exception routing across all US time zones without operational overhead bloat.",
@@ -210,6 +235,11 @@ export const articlesData: Article[] = [
   {
     id: "building-dedicated-remote-talent-pods",
     slug: "building-dedicated-remote-talent-pods",
+    relatedService: {
+      name: "Dedicated Staff Leasing",
+      href: "/services/staff-leasing",
+      description: "Pre-vetted remote talent pods integrated directly into your existing software and operational workflows.",
+    },
     title: "Building Dedicated Remote Talent Pods: SOP Mapping & Continuous QA Governance",
     excerpt:
       "Why transactional staffing agencies fail where dedicated pod governance succeeds: establishing real-time KPI visibility, culture integration, and long-term retention.",
@@ -251,6 +281,11 @@ export const articlesData: Article[] = [
   {
     id: "zero-trust-bpo-security-infrastructure",
     slug: "zero-trust-bpo-security-infrastructure",
+    relatedService: {
+      name: "Technology & SaaS Outsourcing",
+      href: "/industries/technology",
+      description: "Enterprise-grade operational support protected by biometric access, strict VPNs, and SOC-grade protocols.",
+    },
     title: "Biometrics, Cleanrooms & Telephony: Zero-Trust Security in Modern BPO",
     excerpt:
       "How strict hardware provisioning, clean-desk protocols, encrypted telephony trunks, and role-based IAM safeguard sensitive enterprise data in offshore delivery centers.",
@@ -292,6 +327,11 @@ export const articlesData: Article[] = [
   {
     id: "ecommerce-holiday-surge-support-scaling",
     slug: "ecommerce-holiday-surge-support-scaling",
+    relatedService: {
+      name: "E-Commerce Outsourcing Solutions",
+      href: "/industries/ecommerce",
+      description: "Flexible support capacity built for Shopify and omnichannel order management during peak volumes.",
+    },
     title: "E-Commerce Holiday Surge: Scaling Live Support Capacity Without Hiring Panics",
     excerpt:
       "Tactical strategies for onboarding pre-trained holiday surge agents 60 days ahead of peak volume while keeping ticket resolution costs predictable.",
@@ -333,6 +373,11 @@ export const articlesData: Article[] = [
   {
     id: "hipaa-fintech-operational-support-compliance",
     slug: "hipaa-fintech-operational-support-compliance",
+    relatedService: {
+      name: "Healthcare BPO Support",
+      href: "/industries/healthcare",
+      description: "HIPAA-compliant patient coordination, medical billing support, and records verification.",
+    },
     title: "HIPAA & FinTech Support Operations: Navigating High-Stakes Compliance Workflows",
     excerpt:
       "Standard operating procedures for managing sensitive patient verification and financial transaction reconciliation within audit-heavy North American regulatory standards.",
@@ -374,6 +419,11 @@ export const articlesData: Article[] = [
   {
     id: "sop-runbook-engineering-workforce-rampup",
     slug: "sop-runbook-engineering-workforce-rampup",
+    relatedService: {
+      name: "Document & Workflow Processing",
+      href: "/services/document-processing",
+      description: "Structured knowledge transfer, standard operating procedures, and automated workflows.",
+    },
     title: "SOP Runbook Engineering: Codifying Knowledge for Rapid Workforce Ramp-Up",
     excerpt:
       "Step-by-step methodologies to capture unspoken operational knowledge into structured, executable runbooks that cut agent ramp time from 6 weeks to 10 days.",
@@ -415,6 +465,11 @@ export const articlesData: Article[] = [
   {
     id: "real-economics-managed-delivery-pods-vs-domestic-overhead",
     slug: "real-economics-managed-delivery-pods-vs-domestic-overhead",
+    relatedService: {
+      name: "Virtual Assistant Pods",
+      href: "/services/virtual-assistants",
+      description: "Executive administrative assistance, CRM updates, and scheduling at 50-65% lower overhead.",
+    },
     title: "The Real Economics of Managed Delivery Pods vs. Domestic Staffing Overhead",
     excerpt:
       "A granular line-item analysis of direct payroll, healthcare, payroll tax, management drag, and workstation depreciation comparing in-house hires with managed remote teams.",

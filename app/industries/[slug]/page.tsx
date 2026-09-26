@@ -35,20 +35,19 @@ export async function generateStaticParams() {
   }));
 }
 
+import { buildMetadata } from "@/lib/seo";
+import JsonLd, { getIndustryJsonLd } from "@/components/seo/JsonLd";
+
 export async function generateMetadata({ params }: IndustryPageProps): Promise<Metadata> {
   const { slug } = await params;
   const industry = industriesData.find((i) => i.slug === slug);
   if (!industry) return {};
 
-  return {
-    title: `${industry.name} Outsourcing Solutions | Virtual Stack`,
+  return buildMetadata({
+    title: `${industry.name} Outsourcing`,
     description: industry.description,
-    openGraph: {
-      title: `${industry.name} Outsourcing Solutions | Virtual Stack`,
-      description: industry.description,
-      url: `https://virtualstack.us/industries/${industry.slug}`,
-    },
-  };
+    path: `/industries/${industry.slug}`,
+  });
 }
 
 export default async function IndustryDetailPage({ params }: IndustryPageProps) {
@@ -105,6 +104,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
+      <JsonLd data={getIndustryJsonLd(industry)} />
       {/* Slide 1: Unified Reusable Hero Template */}
       <IndustryServiceHero
         badge={config.badge}

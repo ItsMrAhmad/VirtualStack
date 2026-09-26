@@ -2,20 +2,34 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Calendar, Phone } from "lucide-react";
 import { companyData } from "@/lib/data/company";
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show only after user has scrolled down 300px
-      setIsVisible(window.scrollY > 300);
+    setIsVisible(false);
+
+    const getScrollTarget = (): { element: EventTarget; getScroll: () => number } => {
+      const container = document.querySelector<HTMLElement>('[id$="-scroll-container"]');
+      if (container) {
+        return { element: container, getScroll: () => container.scrollTop };
+      }
+      return { element: window, getScroll: () => window.scrollY };
     };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    const { element, getScroll } = getScrollTarget();
+
+    const handleScroll = () => {
+      setIsVisible(getScroll() > 250);
+    };
+
+    element.addEventListener("scroll", handleScroll, { passive: true });
+    return () => element.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
   if (!isVisible) return null;
 

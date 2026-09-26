@@ -6,11 +6,15 @@ import { faqsData } from "@/lib/data/faqs";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Virtual Stack",
+import { buildMetadata } from "@/lib/seo";
+import JsonLd, { getFaqPageJsonLd } from "@/components/seo/JsonLd";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Outsourcing FAQs: Pricing, Onboarding & Security",
   description:
-    "Get clear answers to common questions about onboarding, security, pricing, and dedicated operational staffing with Virtual Stack.",
-};
+    "Get clear answers to common questions about onboarding timelines, security standards, pricing models, and dedicated staffing with Virtual Stack.",
+  path: "/resources/faqs",
+});
 
 export default function FAQsPage() {
   const generalFaqs = faqsData.filter((f) => f.category === "General");
@@ -25,6 +29,7 @@ export default function FAQsPage() {
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
+      <JsonLd data={getFaqPageJsonLd(faqsData)} />
       {/* Slide 1: Hero & General Operations */}
       <section
         id="general"

@@ -127,7 +127,7 @@ export default function Footer({ className }: { className?: string }) {
               Industries
             </h4>
             <ul className="space-y-2 text-sm text-[#94A3B8]">
-              {industriesData.slice(0, 5).map((ind) => (
+              {industriesData.map((ind) => (
                 <li key={ind.slug}>
                   <Link
                     href={`/industries/${ind.slug}`}

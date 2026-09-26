@@ -1,13 +1,23 @@
 import React from "react";
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import HeroSection from "@/components/hero/HeroSection";
 import OutsourcingModel from "@/components/sections/OutsourcingModel";
 import ServicesShowcase from "@/components/sections/ServicesShowcase";
 import HowItWorks from "@/components/sections/HowItWorks";
 import MidPageCTA from "@/components/sections/MidPageCTA";
 import IndustryGrid from "@/components/sections/IndustryGrid";
-import TestimonialsPlaceholder from "@/components/sections/TestimonialsPlaceholder";
+import Testimonials from "@/components/sections/Testimonials";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Virtual Stack | B2B Outsourcing, Customer Support & Back-Office Teams",
+  description:
+    "Scale your business with dedicated customer support, back-office operations, sales support, and remote teams. 24/7/365 operational reliability.",
+  path: "/",
+  absoluteTitle: true,
+});
 
 export default function HomePage() {
   return (
@@ -35,7 +45,7 @@ export default function HomePage() {
       <IndustryGrid />
 
       {/* 7. Client Testimonials */}
-      <TestimonialsPlaceholder />
+      <Testimonials />
 
       {/* 8. High-Impact Closing CTA */}
       <FinalCTA />

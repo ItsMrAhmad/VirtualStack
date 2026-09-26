@@ -1,11 +1,15 @@
 import React from "react";
 import type { Metadata } from "next";
+import Footer from "@/components/layout/Footer";
 import { companyData } from "@/lib/data/company";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | Virtual Stack",
-  description: "Terms and conditions governing the use of Virtual Stack's website and service offerings.",
-};
+export const metadata: Metadata = buildMetadata({
+  title: "Terms of Service",
+  description:
+    "Review the terms and conditions governing the use of Virtual Stack's website, master services agreements, and operational service offerings.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (
@@ -56,6 +60,7 @@ export default function TermsPage() {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

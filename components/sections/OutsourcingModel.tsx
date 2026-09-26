@@ -15,7 +15,6 @@ export default function OutsourcingModel() {
           src="/images/outsourcing-model.jpg"
           alt="Virtual Stack Modern Outsourcing Network"
           fill
-          priority
           sizes="100vw"
           className="object-cover object-center opacity-30 lg:opacity-100 lg:object-contain lg:object-left transition-opacity duration-300"
         />

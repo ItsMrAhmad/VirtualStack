@@ -20,11 +20,15 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "Why Virtual Stack | Credibility, Reliability & Trust",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Why Choose Virtual Stack | Dedicated Operations Partner",
   description:
-    "Discover why North American businesses partner with Virtual Stack for Customer Support, back-office operations, and dedicated remote teams.",
-};
+    "Discover why North American businesses partner with Virtual Stack for dedicated customer support, back-office operations, and 24/7 remote operational talent.",
+  path: "/why-virtual-stack",
+  absoluteTitle: true,
+});
 
 export default function WhyVirtualStackPage() {
   const corePillars = [

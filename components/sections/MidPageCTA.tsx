@@ -13,9 +13,9 @@ export default function MidPageCTA() {
 
           {/* Left Content */}
           <div className="space-y-3 text-center lg:text-left max-w-2xl relative z-10">
-            <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-heading text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight font-heading text-white">
               Have a specific operational bottleneck or upcoming surge?
-            </h3>
+            </h2>
             <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
               In a focused 10-minute consultation, we'll map your SOPs, estimate pod requirements, and deliver transparent pricing.
             </p>

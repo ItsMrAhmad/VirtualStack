@@ -26,28 +26,25 @@ export async function generateStaticParams() {
   }));
 }
 
+import { buildMetadata } from "@/lib/seo";
+import JsonLd, { getBlogPostingJsonLd } from "@/components/seo/JsonLd";
+
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
   const article = articlesData.find((a) => a.slug === slug);
   if (!article) return {};
 
-  return {
-    title: `${article.title} | Virtual Stack Insights`,
+  const isLong = article.title.length + 16 > 60;
+
+  return buildMetadata({
+    title: article.title,
     description: article.excerpt,
-    openGraph: {
-      title: `${article.title} | Virtual Stack Insights`,
-      description: article.excerpt,
-      url: `https://virtualstack.us/resources/blog/${article.slug}`,
-      images: [
-        {
-          url: article.image,
-          width: 1200,
-          height: 675,
-          alt: article.title,
-        },
-      ],
-    },
-  };
+    path: `/resources/blog/${article.slug}`,
+    image: article.image,
+    type: "article",
+    publishedTime: article.date,
+    absoluteTitle: isLong,
+  });
 }
 
 export default async function ArticleDetailPage({ params }: ArticlePageProps) {
@@ -69,6 +66,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
+      <JsonLd data={getBlogPostingJsonLd(article)} />
       {/* Slide 1: Hero & Cover Visual */}
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-4xl mx-auto space-y-4">
@@ -77,12 +75,8 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
               Home
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <Link href="/resources" className="hover:text-[#08A9E6] transition-colors">
-              Resources
-            </Link>
-            <ChevronRight className="w-3 h-3" />
             <Link href="/resources/blog" className="hover:text-[#08A9E6] transition-colors">
-              Insights
+              Blog
             </Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-[#071A2A] font-semibold truncate max-w-[180px] sm:max-w-xs">
@@ -190,6 +184,30 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
             <div className="p-4 sm:p-5 rounded-2xl bg-[#F7FAFC] border-l-4 border-[#08A9E6] text-xs sm:text-sm text-[#071A2A] font-medium leading-relaxed">
               {article.content.conclusion}
             </div>
+
+            {/* Related Operational Service Link Box */}
+            {article.relatedService && (
+              <div className="p-5 sm:p-6 rounded-2xl bg-[#071A2A] text-white border border-[#1A2E40] shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="space-y-1">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#08A9E6]">
+                    Related Operational Solution
+                  </span>
+                  <h3 className="text-base sm:text-lg font-bold font-heading text-white">
+                    {article.relatedService.name}
+                  </h3>
+                  <p className="text-xs text-[#94A3B8] max-w-xl leading-relaxed">
+                    {article.relatedService.description}
+                  </p>
+                </div>
+                <Link
+                  href={article.relatedService.href}
+                  className="inline-flex items-center justify-center gap-1.5 bg-[#08A9E6] hover:bg-[#078FCC] text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-colors shrink-0"
+                >
+                  <span>Explore Solution</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            )}
           </div>
 
           {/* Tags */}

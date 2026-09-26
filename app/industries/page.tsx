@@ -20,11 +20,14 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 import Footer from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-  title: "Industries & Specialized Verticals",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Industry Outsourcing Solutions",
   description:
-    "Tailored B2B operations and dedicated outsourcing teams for Logistics, Healthcare, Financial Services, Insurance, Real Estate, E-Commerce, and Technology.",
-};
+    "Tailored B2B operations and dedicated outsourcing pods for Logistics, Healthcare, Financial Services, Insurance, Real Estate, E-Commerce, and Technology.",
+  path: "/industries",
+});
 
 export default function IndustriesPage() {
   const getIndustryIcon = (iconName: string) => {

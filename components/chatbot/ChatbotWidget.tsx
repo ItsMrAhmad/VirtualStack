@@ -43,8 +43,8 @@ const SUGGESTED_QUESTIONS = [
   "Can I hire just 1 person?",
 ];
 
-export default function ChatbotWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+export default function ChatbotWidget({ initialOpen = false }: { initialOpen?: boolean } = {}) {
+  const [isOpen, setIsOpen] = useState(initialOpen);
   const [messages, setMessages] = useState<ChatMessage[]>(INITIAL_MESSAGES);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
