@@ -23,14 +23,7 @@ const INITIAL_MESSAGES: ChatMessage[] = [
   {
     id: "welcome-1",
     sender: "bot",
-    text: "👋 Hi there! I'm Sarah from the Virtual Stack operations team here in Calgary, Canada.\n\nWhether you're looking for 24/7 fleet dispatch, dedicated customer support, back-office help, or just wondering how our pricing and onboarding work—how can I help your business today?",
-    bullets: [
-      "Dedicated talent pods (50%–65% cost savings vs. domestic hiring)",
-      "24/7/365 coverage across Canada & the United States",
-      "Fast 1–2 week onboarding with your direct candidate approval",
-      "SOC 2, ISO 27001 & HIPAA certified enterprise security",
-    ],
-    showActionButtons: true,
+    text: "Hi there! 👋 I'm Sarah from the operations team in Calgary. How can I help you today?",
     timestamp: "Online now",
   },
 ];
