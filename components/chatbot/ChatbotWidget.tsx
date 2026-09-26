@@ -22,12 +22,12 @@ const INITIAL_MESSAGES: ChatMessage[] = [
   {
     id: "welcome-1",
     sender: "bot",
-    text: "👋 Welcome to Virtual Stack! I'm your AI Operations Specialist. How can I assist your business today?",
+    text: "👋 Hi there! I'm Sarah from the Virtual Stack operations team here in Calgary, Canada.\n\nWhether you're looking for 24/7 fleet dispatch, dedicated customer support, back-office help, or just wondering how our pricing and onboarding work—how can I help your business today?",
     bullets: [
-      "Dedicated Pods: 50–65% cost savings vs. onshore hiring",
-      "24/7/365 Fleet Dispatch, Logistics & Customer Support",
-      "Fast 1–2 Week Onboarding with dedicated Team Lead",
-      "SOC 2, ISO 27001 & HIPAA Compliant Security",
+      "Dedicated talent pods (50%–65% cost savings vs. domestic hiring)",
+      "24/7/365 coverage across Canada & the United States",
+      "Fast 1–2 week onboarding with your direct candidate approval",
+      "SOC 2, ISO 27001 & HIPAA certified enterprise security",
     ],
     showActionButtons: true,
     timestamp: "Online now",
@@ -35,11 +35,11 @@ const INITIAL_MESSAGES: ChatMessage[] = [
 ];
 
 const SUGGESTED_QUESTIONS = [
-  "What services do you offer?",
-  "How much do you charge?",
+  "Do you serve in Canada?",
+  "How much does it cost?",
   "24/7 fleet dispatch details",
   "How fast can we onboard?",
-  "Security & compliance info",
+  "Can I hire just 1 person?",
 ];
 
 export default function ChatbotWidget() {
@@ -125,20 +125,20 @@ export default function ChatbotWidget() {
               <div className="flex items-center gap-2.5">
                 <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-[#08A9E6] to-[#071A2A] flex items-center justify-center p-0.5 shadow-sm">
                   <div className="w-full h-full bg-[#071A2A] rounded-[10px] flex items-center justify-center">
-                    <Bot className="w-5 h-5 text-[#08A9E6]" />
+                    <Sparkles className="w-5 h-5 text-[#08A9E6]" />
                   </div>
                   <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#12C98A] border-2 border-[#071A2A]" />
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <h2 className="text-sm font-bold tracking-tight text-white">Virtual Stack Assistant</h2>
-                    <span className="text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded bg-[#08A9E6]/20 text-[#08A9E6] border border-[#08A9E6]/30">
-                      AI
+                    <h2 className="text-sm font-bold tracking-tight text-white">Sarah • Operations Lead</h2>
+                    <span className="text-[10px] font-semibold uppercase px-1.5 py-0.5 rounded bg-[#12C98A]/20 text-[#12C98A] border border-[#12C98A]/30">
+                      ONLINE
                     </span>
                   </div>
                   <p className="text-[11px] text-[#8E9FAA] flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#12C98A]" />
-                    Online • 24/7 Operations Hub
+                    Calgary, AB Hub • Dedicated Support
                   </p>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function ChatbotWidget() {
                   </div>
                 ) : (
                   <div className="max-w-[90%] bg-white border border-[#DDE6ED] rounded-2xl rounded-tl-xs p-3.5 text-[13px] text-[#0B1724] shadow-sm space-y-2.5">
-                    <p className="leading-relaxed">{msg.text}</p>
+                    <div className="leading-relaxed whitespace-pre-line">{msg.text}</div>
 
                     {/* Bullet Points */}
                     {msg.bullets && msg.bullets.length > 0 && (
@@ -296,7 +296,7 @@ export default function ChatbotWidget() {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask about services, dispatch, pricing..."
+                placeholder="Ask Sarah a question (e.g. Do you serve in Canada?)..."
                 className="flex-1 bg-[#F8FAFC] border border-[#DDE6ED] focus:border-[#08A9E6] focus:bg-white focus:outline-none rounded-xl px-3.5 py-2 text-xs text-[#0B1724] placeholder:text-[#8E9FAA] transition-all"
               />
               <button
@@ -311,9 +311,9 @@ export default function ChatbotWidget() {
             <div className="flex items-center justify-between mt-2 px-1 text-[10px] text-[#8E9FAA]">
               <span className="flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3 text-[#12C98A]" />
-                Enterprise Confidential
+                Calgary Operations Hub
               </span>
-              <span>Virtual Stack Operations</span>
+              <span>Toll-Free: +1 (888) 910-0868</span>
             </div>
           </div>
         </div>
@@ -341,11 +341,11 @@ export default function ChatbotWidget() {
 
         <div className="hidden sm:flex flex-col text-left">
           <span className="text-xs font-bold leading-tight tracking-tight text-white group-hover:text-[#08A9E6] transition-colors">
-            Ask Virtual Stack
+            Chat with Operations
           </span>
           <span className="text-[10px] text-[#8E9FAA] leading-tight flex items-center gap-1">
             <span className="w-1.5 h-1.5 rounded-full bg-[#12C98A]" />
-            Online & Ready
+            Sarah • Online (Calgary)
           </span>
         </div>
 
