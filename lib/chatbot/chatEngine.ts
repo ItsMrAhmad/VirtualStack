@@ -561,13 +561,7 @@ export function processUserQuery(input: string): ChatMessage {
     return {
       id,
       sender: "bot",
-      text: "Hi there! Great to connect with you. I'm part of the Virtual Stack team here in Calgary, Canada.\n\nHow can I help your business today? We specialize in building dedicated, high-performing remote teams for 24/7 fleet dispatch, customer support, back-office data processing, and B2B sales prospecting.\n\nWhat brings you by today?",
-      bullets: [
-        "24/7 Fleet Dispatch & Logistics coordination",
-        "Customer Support (phone, email, live chat)",
-        "Back-Office KYC, data entry & invoice processing",
-        "B2B Sales Prospecting & SDR appointment setting",
-      ],
+      text: "Hey! 👋 Thanks for reaching out. How can I help you today?",
       showActionButtons: true,
       timestamp,
     };
@@ -589,14 +583,9 @@ export function processUserQuery(input: string): ChatMessage {
     return {
       id,
       sender: "bot",
-      text: "I'm Virtual Stack's digital operations assistant, but our real human team in Calgary is right behind this screen!\n\nIf you'd like to speak with a real human right away, you can:\n• Call us directly at +1 (888) 910-0868 (available 24/7)\n• Book a quick 10-Minute Zoom Video Call with our operations director\n• Drop us a note via our contact form for a reply within 2 hours\n\nHow would you prefer to connect?",
-      bullets: [
-        "Real human operations team based in Calgary, AB, Canada",
-        "Toll-Free Phone: +1 (888) 910-0868 (24/7)",
-        "Zero-pressure 10-minute video scoping consultations",
-      ],
+      text: "Good eye! I'm an AI assistant, but our real team in Calgary is right behind the scenes. 😊\n\nIf you'd prefer to talk to a human directly, you can call us at +1 (888) 910-0868 anytime (24/7) or book a quick Zoom call. Otherwise, I'm happy to help answer your questions right here!",
       linkUrl: "/contact",
-      linkText: "Connect with our human team →",
+      linkText: "Connect with our team →",
       showActionButtons: true,
       timestamp,
     };
@@ -618,7 +607,7 @@ export function processUserQuery(input: string): ChatMessage {
     return {
       id,
       sender: "bot",
-      text: "You are very welcome! We'd love the opportunity to partner with your business.\n\nWhenever you're ready to see how a dedicated team looks for your operations, feel free to book a quick 10-minute Zoom chat with our leadership or drop us a line anytime. Have a fantastic day ahead!",
+      text: "You're welcome! If anything else comes up, just ask — I'm right here. Have a great day! 😊",
       showActionButtons: true,
       timestamp,
     };
@@ -628,7 +617,7 @@ export function processUserQuery(input: string): ChatMessage {
     return {
       id,
       sender: "bot",
-      text: "Thanks for stopping by Virtual Stack! Have an awesome day, and don't hesitate to reach back out or call us at +1 (888) 910-0868 whenever you're ready to scale your team. Take care!",
+      text: "Take care! Feel free to come back anytime, or give us a call at +1 (888) 910-0868. Talk soon! 👋",
       showActionButtons: true,
       timestamp,
     };
@@ -674,15 +663,9 @@ export function processUserQuery(input: string): ChatMessage {
   return {
     id,
     sender: "bot",
-    text: "I want to make sure I give you the most accurate answer for your specific business setup! 😊\n\nVirtual Stack is a premier operations partner headquartered in Calgary, Canada. We build dedicated, pre-vetted remote teams for 24/7 fleet dispatch, customer support, back-office processing, and B2B sales.\n\nCould you tell me a little more about what your business does or what specific role you're looking to fill? Or if you prefer, our operations directors can answer your exact questions on a quick 10-minute Zoom consultation!",
-    bullets: [
-      "Save 50% to 65% compared to domestic in-house hiring",
-      "Full deployment within 1 to 2 weeks with your candidate approval",
-      "24/7 operational coverage across Canada & the United States",
-      "Toll-Free Phone: +1 (888) 910-0868 (available 24/7)",
-    ],
+    text: "Hmm, I'm not 100% sure about that one — I don't want to give you the wrong info!\n\nOur team would be the best people to answer that properly. Want me to connect you? You can call us at +1 (888) 910-0868 or book a quick Zoom call.",
     linkUrl: "/book-a-consultation",
-    linkText: "Schedule a 10-Min Scoping Call with our team →",
+    linkText: "Book a quick call with our team →",
     showActionButtons: true,
     timestamp,
   };
