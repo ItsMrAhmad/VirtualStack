@@ -30,8 +30,6 @@ export const chatbotKnowledge: KnowledgeItem[] = [
       "serve in canada",
       "where are you located",
       "north america",
-      "us",
-      "usa",
       "service areas",
     ],
     summary: "Virtual Stack is a premier North American business operations partner founded in 2011 with corporate headquarters in Calgary, Alberta, Canada. We build dedicated, pre-vetted operational talent pods that integrate directly into your software, SOPs, and brand voice across both Canada and the United States.",
@@ -131,7 +129,7 @@ export const chatbotKnowledge: KnowledgeItem[] = [
       "KYC (Know Your Customer) identity verification, AML screening, and fraud review",
       "24/7 user-generated content moderation and marketplace catalog management"
     ],
-    linkUrl: "/services/data-entry",
+    linkUrl: "/services/back-office-operations",
     linkText: "Explore Back-Office Services",
     recommendedAction: "contact",
   },
