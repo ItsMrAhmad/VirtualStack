@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Virtual Stack",
   },
   description:
-    "Scale your business with dedicated customer support, back-office operations, B2B sales support, and dedicated remote teams. Operating 24/7/365 with over 200 workstation capacity.",
+    "Scale your business with dedicated customer support, back-office operations, and remote B2B sales teams. 24/7/365 operational reliability.",
   authors: [{ name: "Virtual Stack" }],
   creator: "Virtual Stack",
   openGraph: {
@@ -80,6 +80,8 @@ export default function RootLayout({
       className={`${manrope.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://calendly.com" />
+        <link rel="preconnect" href="https://assets.calendly.com" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

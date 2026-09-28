@@ -2,7 +2,7 @@ import React from "react";
 import { companyData } from "@/lib/data/company";
 
 interface JsonLdProps {
-  data: Record<string, any> | Record<string, any>[];
+  data: Record<string, unknown> | Record<string, unknown>[];
 }
 
 export default function JsonLd({ data }: JsonLdProps) {
@@ -49,6 +49,24 @@ export function getOrganizationAndWebsiteJsonLd() {
         companyData.socials.twitter,
         companyData.socials.instagram,
       ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: companyData.name,
+      image: "https://virtualstack.us/logo.png",
+      "@id": "https://virtualstack.us/#localBusiness",
+      url: "https://virtualstack.us",
+      telephone: companyData.contacts.tollFreePhone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: `${companyData.corporateHeadquarters.addressLine1}, ${companyData.corporateHeadquarters.suite}`,
+        addressLocality: companyData.corporateHeadquarters.city,
+        addressRegion: companyData.corporateHeadquarters.provinceState,
+        postalCode: companyData.corporateHeadquarters.postalCode,
+        addressCountry: "CA",
+      },
+      priceRange: "$$",
     },
     {
       "@context": "https://schema.org",

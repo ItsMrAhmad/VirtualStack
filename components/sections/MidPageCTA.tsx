@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Calendar, PhoneCall, ArrowRight } from "lucide-react";
-import { companyData } from "@/lib/data/company";
 
 export default function MidPageCTA() {
   return (
@@ -17,7 +16,7 @@ export default function MidPageCTA() {
               Have a specific operational bottleneck or upcoming surge?
             </h2>
             <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
-              In a focused 10-minute consultation, we'll map your SOPs, estimate pod requirements, and deliver transparent pricing.
+              In a focused 10-minute consultation, we&apos;ll map your SOPs, estimate pod requirements, and deliver transparent pricing.
             </p>
           </div>
 

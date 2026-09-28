@@ -13,6 +13,7 @@ export default function ConsultationForm() {
     serviceInterest: "Customer Support",
     companySize: "11-50 employees",
     message: "",
+    honeypot: "",
   });
 
   // Until a form backend is connected, submissions are handed to the visitor's
@@ -37,6 +38,10 @@ export default function ConsultationForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (formData.honeypot) {
+      // Silently discard bot submissions
+      return;
+    }
     window.location.href = buildMailto();
     setStatus("email-opened");
   };
@@ -222,6 +227,15 @@ export default function ConsultationForm() {
       </div>
 
       <div className="pt-1.5">
+        <input
+          type="text"
+          name="honeypot"
+          value={formData.honeypot}
+          onChange={(e) => setFormData({ ...formData, honeypot: e.target.value })}
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+        />
         <button
           type="submit"
           className="w-full bg-[#08A9E6] hover:bg-[#078FCC] text-white font-semibold text-sm py-3 px-6 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 group cursor-pointer"

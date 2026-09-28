@@ -67,6 +67,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
@@ -95,6 +96,7 @@ export default function Navbar() {
 
   // Close mobile menu on route change
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [pathname]);
@@ -314,6 +316,7 @@ export default function Navbar() {
               {/* Why Virtual Stack */}
               <Link
                 href="/why-virtual-stack"
+                aria-current={pathname === "/why-virtual-stack" ? "page" : undefined}
                 className={cn(
                   "px-2 xl:px-3 py-1.5 xl:py-2 rounded-lg transition-colors hover:text-[#08A9E6] hover:bg-[#F7FAFC]",
                   pathname === "/why-virtual-stack" && "text-[#08A9E6] font-semibold"
@@ -325,6 +328,7 @@ export default function Navbar() {
               {/* About */}
               <Link
                 href="/about"
+                aria-current={pathname === "/about" ? "page" : undefined}
                 className={cn(
                   "px-2 xl:px-3 py-1.5 xl:py-2 rounded-lg transition-colors hover:text-[#08A9E6] hover:bg-[#F7FAFC]",
                   pathname === "/about" && "text-[#08A9E6] font-semibold"
@@ -378,6 +382,7 @@ export default function Navbar() {
               {/* Contact */}
               <Link
                 href="/contact"
+                aria-current={pathname === "/contact" ? "page" : undefined}
                 className={cn(
                   "px-2 xl:px-3 py-1.5 xl:py-2 rounded-lg transition-colors hover:text-[#08A9E6] hover:bg-[#F7FAFC]",
                   pathname === "/contact" && "text-[#08A9E6] font-semibold"

@@ -11,22 +11,19 @@ export default function Testimonials() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-  // Autoplay with 6s interval and pause on hover
-  const autoplay = useRef(
-    Autoplay({
-      delay: 6000,
-      stopOnInteraction: false,
-      stopOnMouseEnter: true,
-    })
-  );
-
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
       align: "start",
       containScroll: false,
     },
-    [autoplay.current]
+    [
+      Autoplay({
+        delay: 6000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    ]
   );
 
   // Respect prefers-reduced-motion
@@ -59,6 +56,7 @@ export default function Testimonials() {
 
   useEffect(() => {
     if (!emblaApi) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setScrollSnaps(emblaApi.scrollSnapList());
     onSelect();
     emblaApi.on("select", onSelect);

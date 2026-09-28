@@ -24,18 +24,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: SITE_UPDATED,
+    changeFrequency: (route === "" ? "weekly" : "monthly") as "weekly" | "monthly",
+    priority: route === "" ? 1.0 : 0.8,
   }));
 
   // Dynamic service pages
   const serviceRoutes = servicesData.map((service) => ({
     url: `${baseUrl}/services/${service.slug}`,
     lastModified: SITE_UPDATED,
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
   }));
 
   // Dynamic industry pages
   const industryRoutes = industriesData.map((ind) => ({
     url: `${baseUrl}/industries/${ind.slug}`,
     lastModified: SITE_UPDATED,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
   }));
 
   // Dynamic blog articles (with stable parsed dates)
@@ -44,6 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return {
       url: `${baseUrl}/resources/blog/${article.slug}`,
       lastModified: isNaN(parsedDate.getTime()) ? SITE_UPDATED : parsedDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     };
   });
 

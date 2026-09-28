@@ -45,9 +45,9 @@ export default function ServicesPage() {
 
   return (
     <div
-      id="services-scroll-container"
+      id="services-page-wrapper"
       tabIndex={0}
-      className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="relative bg-white text-[#0B1724] outline-none"
     >
       {/* Slide 1: Services Hero & Quick Jump */}
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-start pt-24 sm:pt-26 items-center px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">

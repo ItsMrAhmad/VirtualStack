@@ -22,9 +22,9 @@ export const metadata: Metadata = buildMetadata({
 export default function HomePage() {
   return (
     <div
-      id="home-scroll-container"
+      id="home-page-wrapper"
       tabIndex={0}
-      className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="relative bg-white text-[#0B1724] outline-none"
     >
       {/* 1. Hero Section with Background Operations Imagery */}
       <HeroSection />
