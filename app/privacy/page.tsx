@@ -26,7 +26,7 @@ export default function PrivacyPage() {
           <section className="space-y-3">
             <h2 className="text-lg font-bold text-[#071A2A] font-heading">1. Overview</h2>
             <p>
-              Virtual Stack ("we", "us", "our") respects the privacy of our clients, website visitors, and
+              Virtual Stack (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) respects the privacy of our clients, website visitors, and
               operational partners. This Privacy Policy explains our practices regarding the collection,
               use, and protection of information gathered through our website (virtualstack.us) and our B2B
               service engagements.

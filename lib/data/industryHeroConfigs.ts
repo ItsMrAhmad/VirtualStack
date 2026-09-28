@@ -35,7 +35,7 @@ export interface IndustryHeroData {
   imageTitle: string;
   imageSubtitle: string;
   statusBadge: string;
-  icon: any;
+  icon: React.ElementType;
 }
 
 export const industryHeroConfigs: Record<string, IndustryHeroData> = {

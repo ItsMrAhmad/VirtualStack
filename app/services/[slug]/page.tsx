@@ -60,7 +60,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     notFound();
   }
 
-  const schemaData: any[] = [...getServiceJsonLd(service)];
+  const schemaData: Record<string, unknown>[] = [...getServiceJsonLd(service)];
   if (service.faqs && service.faqs.length > 0) {
     schemaData.push(getFaqPageJsonLd(service.faqs));
   }

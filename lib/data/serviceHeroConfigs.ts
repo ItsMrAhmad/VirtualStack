@@ -38,7 +38,7 @@ export interface ServiceHeroData {
   imageTitle: string;
   imageSubtitle: string;
   statusBadge: string;
-  icon: any;
+  icon: React.ElementType;
   extraPills?: React.ReactNode;
 }
 

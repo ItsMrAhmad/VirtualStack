@@ -69,7 +69,7 @@ export default function ChatbotWidget({ initialOpen = false }: { initialOpen?: b
     if (!query || isTyping) return;
 
     const userMessage: ChatMessage = {
-      id: `user-${Date.now()}`,
+      id: `user-${crypto.randomUUID()}`,
       sender: "user",
       text: query,
       timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
