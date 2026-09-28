@@ -438,6 +438,7 @@ export default function Navbar() {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="p-2.5 rounded-xl text-[#071A2A] hover:bg-[#F7FAFC] transition-colors border border-[#DDE6ED]"
                 aria-label="Toggle Navigation Menu"
+                aria-expanded={isMobileMenuOpen}
               >
                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
@@ -551,6 +552,13 @@ export default function Navbar() {
                   className="block py-2.5 text-base font-semibold text-[#071A2A] border-b border-[#F7FAFC]"
                 >
                   Frequently Asked Questions
+                </Link>
+
+                <Link
+                  href="/resources/blog"
+                  className="block py-2.5 text-base font-semibold text-[#071A2A] border-b border-[#F7FAFC]"
+                >
+                  Insights & Blog
                 </Link>
 
                 <Link

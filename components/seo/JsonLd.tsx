@@ -40,7 +40,7 @@ export function getOrganizationAndWebsiteJsonLd() {
         "@type": "ContactPoint",
         telephone: companyData.contacts.tollFreePhone,
         contactType: "customer service",
-        availableLanguage: ["English", "French"],
+        availableLanguage: ["English"],
         hoursAvailable: "Mo-Su 00:00-24:00",
       },
       sameAs: [

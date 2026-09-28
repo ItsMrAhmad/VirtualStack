@@ -65,7 +65,7 @@ export default function ServicesPage() {
               </div>
 
               <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#071A2A] tracking-tight font-heading leading-tight">
-                Operational capabilities <span className="text-[#08A9E6]">built for scale.</span>
+                Outsourcing services <span className="text-[#08A9E6]">built for scale.</span>
               </h1>
 
               <p className="text-xs sm:text-sm text-[#08A9E6] font-semibold leading-snug">

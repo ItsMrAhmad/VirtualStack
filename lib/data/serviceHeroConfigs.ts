@@ -46,7 +46,7 @@ export const serviceHeroConfigs: Record<string, ServiceHeroData> = {
   // PILLAR 1: CUSTOMER SUPPORT
   "customer-support": {
     badge: "Top 3% Vetted Brand Specialists",
-    h1Prefix: "Dedicated Customer Support, ",
+    h1Prefix: "Customer Support Outsourcing, ",
     h1Highlight: "Inbound Voice",
     h1Suffix: " & Helpdesk",
     subheading: "Dedicated agents trained exclusively on your brand knowledge base and workflows.",
@@ -490,9 +490,9 @@ export const serviceHeroConfigs: Record<string, ServiceHeroData> = {
   },
   "telemarketing": {
     badge: "100% Compliant TCPA & DNC Protocol",
-    h1Prefix: "Outbound Telesales, ",
+    h1Prefix: "Telemarketing & Outbound Telesales, ",
     h1Highlight: "Phone Surveys",
-    h1Suffix: " & Database Reactivation",
+    h1Suffix: " & Reactivation",
     subheading: "High-volume telephone outreach executed by articulate, script-trained sales professionals.",
     description: "Turn cold prospect lists and dormant customer accounts into active revenue opportunities. Our outbound calling pods run scripted surveys, verify contact lists, qualify prospect interest, and reactivate lapsed customer accounts at scale.",
     stats: [

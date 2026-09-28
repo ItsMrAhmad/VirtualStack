@@ -128,7 +128,7 @@ export const industryHeroConfigs: Record<string, IndustryHeroData> = {
     icon: HeartPulse
   },
   "financial-services": {
-    badge: "SOC 2 Aligned Facility & Workstations",
+    badge: "SOC 2 Type II Compliant Facility & Workstations",
     h1Prefix: "Dedicated Financial Operations, ",
     h1Highlight: "Bookkeeping",
     h1Suffix: " & Reconciliation",
@@ -217,7 +217,7 @@ export const industryHeroConfigs: Record<string, IndustryHeroData> = {
   },
   "real-estate": {
     badge: "< 60s Inbound Tenant Response",
-    h1Prefix: "Dedicated Property Management, ",
+    h1Prefix: "Real Estate & Property Management Support, ",
     h1Highlight: "Tenant Triage",
     h1Suffix: " & Maintenance Dispatch",
     subheading: "Built for property managers, residential portfolios, and commercial asset teams.",
@@ -305,9 +305,9 @@ export const industryHeroConfigs: Record<string, IndustryHeroData> = {
   },
   "technology": {
     badge: "92% First-Contact Ticket Resolution",
-    h1Prefix: "Technical Support, ",
+    h1Prefix: "SaaS & Technology Outsourcing, ",
     h1Highlight: "Tier 1–3 Helpdesk",
-    h1Suffix: " & SaaS Operations",
+    h1Suffix: " & User Support",
     subheading: "Built for B2B SaaS, IT services, and software platforms with SLA commitments.",
     description: "Protect retention and prevent churn by resolving user bug reports, onboarding questions, and outage tickets immediately. Our technical support pods triage bugs, reproduce errors in sandbox environments, and route escalations directly into your dev workflow.",
     stats: [
@@ -349,9 +349,9 @@ export const industryHeroConfigs: Record<string, IndustryHeroData> = {
   },
   "professional-services": {
     badge: "Strict NDA & Confidentiality Guaranteed",
-    h1Prefix: "Executive Assistance, ",
+    h1Prefix: "Law Firm & Professional Services Support, ",
     h1Highlight: "Client Intake",
-    h1Suffix: " & Practice Support",
+    h1Suffix: " & Practice Admin",
     subheading: "Built for law firms, management consultancies, and executive advisory practices.",
     description: "Reclaim 15+ billable partner hours every week by delegating administrative friction. Our discreet practice coordinators manage calendar scheduling, client billing prep, travel arrangements, and preliminary intake calls under rigorous confidentiality.",
     stats: [

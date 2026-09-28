@@ -20,8 +20,7 @@ import {
   Smartphone,
   Share2
 } from "lucide-react";
-import { servicesData, ServiceItem } from "@/lib/data/services";
-import { industriesData } from "@/lib/data/industries";
+import { servicesData } from "@/lib/data/services";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 import Footer from "@/components/layout/Footer";
@@ -161,7 +160,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         trustLine={config.trustLine}
         compatibility={config.compatibility}
         imageSrc={`/images/service-${service.pillarId}.jpg`}
-        imageAlt={service.name}
+        imageAlt={`Virtual Stack ${service.name.toLowerCase()} specialists at work`}
         imageCardTitle={config.imageTitle}
         imageCardSubtitle={config.imageSubtitle}
         imageStatusBadge={config.statusBadge}
@@ -192,7 +191,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 {service.challenges.map((c, idx) => (
                   <div key={idx} className="space-y-0.5">
                     <h4 className="text-xs sm:text-sm font-bold text-[#071A2A]">{c.title}</h4>
-                    <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2">{c.description}</p>
+                    <p className="text-xs text-[#5F7183] leading-relaxed">{c.description}</p>
                   </div>
                 ))}
               </div>
@@ -208,7 +207,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 {service.solutions.map((s, idx) => (
                   <div key={idx} className="space-y-0.5">
                     <h4 className="text-xs sm:text-sm font-bold text-[#071A2A]">{s.title}</h4>
-                    <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2">{s.description}</p>
+                    <p className="text-xs text-[#5F7183] leading-relaxed">{s.description}</p>
                   </div>
                 ))}
               </div>
@@ -239,7 +238,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 <div className="p-1.5 rounded-lg bg-[#EBF7FD] text-[#08A9E6] shrink-0">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-semibold text-[#071A2A] line-clamp-1">{cap}</span>
+                <span className="text-xs font-semibold text-[#071A2A]">{cap}</span>
               </div>
             ))}
           </div>
@@ -255,7 +254,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   {step.step}
                 </span>
                 <h3 className="text-xs sm:text-sm font-bold text-[#071A2A] font-heading">{step.title}</h3>
-                <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2">{step.description}</p>
+                <p className="text-xs text-[#5F7183] leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -267,7 +266,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         <div className="my-auto w-full max-w-7xl mx-auto space-y-5 mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
-              Measurable Business Value & FAQs
+              Measurable Business Value
             </h2>
             <p className="text-xs sm:text-sm text-[#5F7183]">
               Bottom-line outcomes and answers to common operational questions.
@@ -278,28 +277,60 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             {service.benefits.map((b, idx) => (
               <div key={idx} className="bg-[#F7FAFC] rounded-xl p-4 border border-[#DDE6ED] shadow-xs space-y-1">
                 <h3 className="text-xs sm:text-sm font-bold text-[#071A2A] font-heading">{b.title}</h3>
-                <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2">{b.description}</p>
+                <p className="text-xs text-[#5F7183] leading-relaxed">{b.description}</p>
               </div>
             ))}
           </div>
 
-          {/* FAQs */}
+          {/* FAQs: every question is rendered in full so it matches the FAQPage schema */}
           {service.faqs.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto pt-2">
-              {service.faqs.slice(0, 4).map((faq, idx) => (
-                <div
+            <div className="space-y-2.5 max-w-4xl mx-auto pt-2">
+              <h2 className="text-base sm:text-lg font-bold text-[#071A2A] font-heading text-center">
+                {service.name} FAQs
+              </h2>
+              {service.faqs.map((faq, idx) => (
+                <details
                   key={idx}
-                  className="p-3.5 rounded-xl bg-[#F7FAFC] border border-[#DDE6ED] space-y-1"
+                  className="group p-3.5 rounded-xl bg-[#F7FAFC] border border-[#DDE6ED] open:border-[#08A9E6]/50"
+                  open={idx === 0}
                 >
-                  <h3 className="text-xs font-bold text-[#071A2A] flex items-center gap-1.5">
-                    <HelpCircle className="w-3.5 h-3.5 text-[#08A9E6] shrink-0" />
-                    <span className="line-clamp-1">{faq.question}</span>
-                  </h3>
-                  <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2 pl-5">
+                  <summary className="cursor-pointer list-none flex items-start justify-between gap-3">
+                    <h3 className="text-xs sm:text-sm font-bold text-[#071A2A] flex items-start gap-1.5">
+                      <HelpCircle className="w-3.5 h-3.5 text-[#08A9E6] shrink-0 mt-0.5" />
+                      <span>{faq.question}</span>
+                    </h3>
+                    <span aria-hidden="true" className="text-[#08A9E6] font-bold group-open:rotate-45 transition-transform">
+                      +
+                    </span>
+                  </summary>
+                  <p className="text-xs sm:text-sm text-[#5F7183] leading-relaxed pl-5 pt-2">
                     {faq.answer}
                   </p>
-                </div>
+                </details>
               ))}
+            </div>
+          )}
+
+          {/* Related services (internal links within the same pillar) */}
+          {relatedServices.length > 0 && (
+            <div className="max-w-4xl mx-auto pt-2 space-y-2.5">
+              <h2 className="text-base sm:text-lg font-bold text-[#071A2A] font-heading text-center">
+                Related {service.pillarName} Services
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {relatedServices.map((rel) => (
+                  <Link
+                    key={rel.slug}
+                    href={`/services/${rel.slug}`}
+                    className="p-3.5 rounded-xl bg-white border border-[#DDE6ED] hover:border-[#08A9E6] shadow-xs transition-all group flex items-center justify-between gap-2"
+                  >
+                    <span className="text-xs sm:text-sm font-bold text-[#071A2A] group-hover:text-[#08A9E6] transition-colors">
+                      {rel.name}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#5F7183] group-hover:text-[#08A9E6] shrink-0" />
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
         </div>

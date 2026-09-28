@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -47,9 +45,9 @@ export default function OperationsDiagram() {
                 </div>
                 <div>
                   <div className="flex items-center gap-1">
-                    <h4 className="text-xs sm:text-sm font-bold tracking-tight text-white font-heading group-hover:text-[#08A9E6] transition-colors">
+                    <p className="text-xs sm:text-sm font-bold tracking-tight text-white font-heading group-hover:text-[#08A9E6] transition-colors">
                       Virtual Stack Operational Core
-                    </h4>
+                    </p>
                     <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
                   </div>
                   <p className="text-[10px] text-[#94A3B8]">

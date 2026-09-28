@@ -79,7 +79,7 @@ export default function IndustryGrid() {
                 <div className="relative w-full h-28 sm:h-32 overflow-hidden bg-slate-100">
                   <Image
                     src={`/images/industry-${ind.slug}.jpg`}
-                    alt={ind.name}
+                    alt={`${ind.name} outsourcing services`}
                     fill
                     sizes="(max-width: 640px) 80vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"

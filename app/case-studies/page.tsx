@@ -27,7 +27,7 @@ export default function CaseStudiesPage() {
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-2xl mx-auto text-center space-y-4">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#071A2A] tracking-tight font-heading">
-            Operational outcomes that speak for themselves.
+            Outsourcing case studies: outcomes that speak for themselves.
           </h1>
           <p className="text-xs sm:text-sm text-[#5F7183] leading-relaxed">
             Real frameworks showing how our clients solved critical operational bottlenecks, expanded customer
@@ -97,7 +97,7 @@ export default function CaseStudiesPage() {
               {/* Right Metrics Grid */}
               <div className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-6 border border-[#DDE6ED] shadow-xs space-y-4">
                 <h3 className="text-xs font-bold uppercase tracking-wider text-[#071A2A] pb-2 border-b border-[#DDE6ED]">
-                  Verified Operational Results
+                  Operational Results
                 </h3>
 
                 <div className="space-y-3">
@@ -112,9 +112,15 @@ export default function CaseStudiesPage() {
                         </div>
                         <div className="text-xs text-[#5F7183] mt-0.5 font-medium">{res.label}</div>
                       </div>
-                      <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                        Target Met
-                      </span>
+                      {res.verified ? (
+                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                          Target Met
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-bold text-[#5F7183] bg-white px-2 py-0.5 rounded border border-[#DDE6ED]">
+                          Benchmark
+                        </span>
+                      )}
                     </div>
                   ))}
                 </div>

@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import { ArrowRight, CheckCircle2, Calendar, ShieldCheck, Phone, Mail } from "lucide-react";
+import { ShieldCheck, Mail } from "lucide-react";
 import { companyData } from "@/lib/data/company";
 
 export default function ConsultationForm() {
@@ -16,70 +15,77 @@ export default function ConsultationForm() {
     message: "",
   });
 
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  // Until a form backend is connected, submissions are handed to the visitor's
+  // email app, pre-filled, so no inquiry is silently lost.
+  const [status, setStatus] = useState<"idle" | "email-opened">("idle");
+
+  const buildMailto = () => {
+    const subject = `Website inquiry: ${formData.serviceInterest} (${formData.company})`;
+    const body = [
+      `Name: ${formData.name}`,
+      `Work email: ${formData.email}`,
+      `Company: ${formData.company}`,
+      `Phone: ${formData.phone || "-"}`,
+      `Service interest: ${formData.serviceInterest}`,
+      `Company size: ${formData.companySize}`,
+      "",
+      "Requirements:",
+      formData.message || "-",
+    ].join("\n");
+    return `mailto:${companyData.contacts.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("submitting");
-
-    // Simulate submission
-    setTimeout(() => {
-      setStatus("success");
-    }, 800);
+    window.location.href = buildMailto();
+    setStatus("email-opened");
   };
 
-  if (status === "success") {
+  if (status === "email-opened") {
     return (
-      <div className="bg-white rounded-2xl border border-[#DDE6ED] p-8 sm:p-10 shadow-sm text-center space-y-6">
-        <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-          <CheckCircle2 className="w-8 h-8" />
+      <div className="bg-white rounded-2xl border border-[#DDE6ED] p-8 sm:p-10 shadow-sm text-center space-y-6" role="status">
+        <div className="w-14 h-14 rounded-full bg-[#EBF7FD] text-[#08A9E6] flex items-center justify-center mx-auto">
+          <Mail className="w-7 h-7" />
         </div>
 
         <div className="space-y-2">
-          <h3 className="text-2xl font-extrabold text-[#071A2A] font-heading">
-            Inquiry Received!
-          </h3>
+          <h2 className="text-2xl font-extrabold text-[#071A2A] font-heading">
+            One last step: press Send
+          </h2>
           <p className="text-sm text-[#5F7183] max-w-md mx-auto">
-            Thank you, <span className="font-semibold text-[#071A2A]">{formData.name}</span>. An operations specialist
-            will review your inquiry and reach out within 2 business hours.
+            Your email app should now be open with your inquiry filled in. Press <strong>Send</strong> and an
+            operations specialist will get back to you.
           </p>
         </div>
 
-        {/* Prompt to book directly via Calendly */}
-        <div className="bg-[#EBF7FD] rounded-xl p-6 border border-[#08A9E6]/30 max-w-md mx-auto space-y-3">
-          <div className="flex items-center justify-center gap-2 text-sm font-bold text-[#071A2A]">
-            <Calendar className="w-4 h-4 text-[#08A9E6]" />
-            <span>Prefer to schedule directly right now?</span>
-          </div>
-          <p className="text-xs text-[#5F7183]">
-            Pick a convenient time on our live calendar and receive a Zoom meeting invitation instantly.
+        <div className="bg-[#F7FAFC] rounded-xl p-5 border border-[#DDE6ED] max-w-md mx-auto space-y-2 text-sm text-[#5F7183]">
+          <p className="font-semibold text-[#071A2A]">Email app didn&apos;t open?</p>
+          <p>
+            Email us at{" "}
+            <a
+              href={buildMailto()}
+              className="font-semibold text-[#08A9E6] hover:underline"
+            >
+              {companyData.contacts.email}
+            </a>{" "}
+            or call{" "}
+            <a
+              href={`tel:${companyData.contacts.tollFreePhone}`}
+              className="font-semibold text-[#08A9E6] hover:underline"
+            >
+              {companyData.contacts.tollFreeDisplay}
+            </a>{" "}
+            (24/7).
           </p>
-          <Link
-            href="/book-a-consultation"
-            className="inline-flex items-center justify-center gap-2 w-full bg-[#08A9E6] hover:bg-[#078FCC] text-white text-xs font-semibold py-2.5 px-4 rounded-lg shadow-sm transition-colors"
-          >
-            <span>Book a 10-Min Zoom Consultation →</span>
-          </Link>
         </div>
 
         <div>
           <button
             type="button"
-            onClick={() => {
-              setStatus("idle");
-              setFormData({
-                name: "",
-                email: "",
-                company: "",
-                phone: "",
-                serviceInterest: "Customer Support",
-                companySize: "11-50 employees",
-                message: "",
-              });
-            }}
+            onClick={() => setStatus("idle")}
             className="text-xs font-semibold text-[#5F7183] hover:text-[#071A2A] underline"
           >
-            Submit another message
+            Edit my inquiry
           </button>
         </div>
       </div>
@@ -89,11 +95,11 @@ export default function ConsultationForm() {
   return (
     <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-[#DDE6ED] p-5 sm:p-8 shadow-sm space-y-3.5 sm:space-y-4.5">
       <div className="border-b border-[#DDE6ED] pb-3.5 space-y-1">
-        <h3 className="text-xl font-bold text-[#071A2A] font-heading tracking-tight">
+        <h2 className="text-xl font-bold text-[#071A2A] font-heading tracking-tight">
           Send an Inquiry
-        </h3>
+        </h2>
         <p className="text-xs text-[#5F7183] leading-relaxed">
-          Complete this short form and an operations manager will contact you promptly.
+          Complete this short form. Pressing the button opens your email app with everything filled in, ready to send.
         </p>
       </div>
 
@@ -218,19 +224,25 @@ export default function ConsultationForm() {
       <div className="pt-1.5">
         <button
           type="submit"
-          disabled={status === "submitting"}
           className="w-full bg-[#08A9E6] hover:bg-[#078FCC] text-white font-semibold text-sm py-3 px-6 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 group cursor-pointer"
         >
-          <span>{status === "submitting" ? "Sending..." : "Talk to an Expert →"}</span>
+          <Mail className="w-4 h-4" />
+          <span>Send Inquiry by Email</span>
         </button>
       </div>
 
-      <div className="flex items-center justify-between text-[11px] text-[#5F7183] pt-1">
+      <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#5F7183] pt-1">
         <span className="flex items-center gap-1">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
           Strict NDA protected
         </span>
-        <span>Average response: &lt; 2 hours</span>
+        <span>
+          Or call{" "}
+          <a href={`tel:${companyData.contacts.tollFreePhone}`} className="font-semibold text-[#08A9E6] hover:underline">
+            {companyData.contacts.tollFreeDisplay}
+          </a>{" "}
+          (24/7)
+        </span>
       </div>
     </form>
   );

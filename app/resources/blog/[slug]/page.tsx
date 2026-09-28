@@ -12,7 +12,7 @@ import {
   CheckCircle2,
   BookOpen,
 } from "lucide-react";
-import { articlesData } from "@/lib/data/articles";
+import { articlesData, getRelatedArticles } from "@/lib/data/articles";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
 
@@ -55,10 +55,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
     notFound();
   }
 
-  // Related articles (same category or others)
-  const relatedArticles = articlesData
-    .filter((a) => a.id !== article.id)
-    .slice(0, 3);
+  const relatedArticles = getRelatedArticles(article);
 
   return (
     <div
@@ -147,7 +144,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
 
       {/* Slide 2: Article Analysis & Takeaways (Dedicated Reading Pane) */}
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
-        <div className="my-auto w-full max-w-3xl mx-auto max-h-[82vh] overflow-y-auto pr-2 sm:pr-4 space-y-6">
+        <div className="my-auto w-full max-w-3xl mx-auto space-y-6">
           {/* Executive Takeaways Box */}
           <div className="p-5 sm:p-6 rounded-2xl bg-[#EBF7FD]/60 border border-[#08A9E6]/30 space-y-3">
             <div className="flex items-center gap-2 text-xs font-bold text-[#071A2A]">
@@ -236,9 +233,9 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
           <div className="flex items-center justify-between border-b border-[#DDE6ED] pb-3">
             <div className="flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-[#08A9E6]" />
-              <h3 className="text-lg sm:text-xl font-bold text-[#071A2A] font-heading">
+              <h2 className="text-lg sm:text-xl font-bold text-[#071A2A] font-heading">
                 Related Operational Insights
-              </h3>
+              </h2>
             </div>
 
             <Link
@@ -261,9 +258,9 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                   <span className="text-[10px] font-semibold text-[#071A2A] bg-[#F7FAFC] px-2 py-0.5 rounded-md border border-[#DDE6ED]">
                     {rel.category}
                   </span>
-                  <h4 className="text-xs sm:text-sm font-bold text-[#071A2A] group-hover:text-[#08A9E6] transition-colors line-clamp-2 leading-snug">
+                  <h3 className="text-xs sm:text-sm font-bold text-[#071A2A] group-hover:text-[#08A9E6] transition-colors line-clamp-2 leading-snug">
                     {rel.title}
-                  </h4>
+                  </h3>
                   <p className="text-[11px] text-[#5F7183] line-clamp-2">
                     {rel.excerpt}
                   </p>
@@ -283,9 +280,9 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
           {/* Quick Consultation Callout */}
           <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#DDE6ED] flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="space-y-1 text-center sm:text-left">
-              <h4 className="text-sm sm:text-base font-bold text-[#071A2A] font-heading">
+              <h3 className="text-sm sm:text-base font-bold text-[#071A2A] font-heading">
                 Ready to benchmark your team&apos;s operational economics?
-              </h4>
+              </h3>
               <p className="text-xs text-[#5F7183]">
                 Schedule a 10-minute operational scoping call with our practice leads.
               </p>

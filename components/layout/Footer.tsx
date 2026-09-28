@@ -95,9 +95,9 @@ export default function Footer({ className }: { className?: string }) {
 
           {/* Services Column */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading">
+            <p className="text-sm font-bold text-white uppercase tracking-wider font-heading">
               Services
-            </h4>
+            </p>
             <ul className="space-y-2 text-sm text-[#94A3B8]">
               {servicePillars.map((pillar) => (
                 <li key={pillar.id}>
@@ -123,9 +123,9 @@ export default function Footer({ className }: { className?: string }) {
 
           {/* Industries Column */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading">
+            <p className="text-sm font-bold text-white uppercase tracking-wider font-heading">
               Industries
-            </h4>
+            </p>
             <ul className="space-y-2 text-sm text-[#94A3B8]">
               {industriesData.map((ind) => (
                 <li key={ind.slug}>
@@ -151,9 +151,9 @@ export default function Footer({ className }: { className?: string }) {
 
           {/* Company Column */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading">
+            <p className="text-sm font-bold text-white uppercase tracking-wider font-heading">
               Company
-            </h4>
+            </p>
             <ul className="space-y-2 text-sm text-[#94A3B8]">
               <li>
                 <Link href="/about" className="hover:text-white transition-colors block">
@@ -190,9 +190,9 @@ export default function Footer({ className }: { className?: string }) {
 
           {/* Direct Verified Contact Column */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider font-heading">
+            <p className="text-sm font-bold text-white uppercase tracking-wider font-heading">
               Get in Touch
-            </h4>
+            </p>
             <div className="space-y-3 text-sm text-[#94A3B8]">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#08A9E6] shrink-0 mt-1" />
@@ -244,7 +244,7 @@ export default function Footer({ className }: { className?: string }) {
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Service
             </Link>
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link href="/resources/faqs#security" className="hover:text-white transition-colors">
               Security & Compliance
             </Link>
             <button

@@ -67,7 +67,7 @@ export default function AboutPage() {
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-4 sm:py-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-4xl mx-auto text-center space-y-2 sm:space-y-3">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#071A2A] tracking-tight font-heading leading-tight">
-            North American leadership. Global operational capability.
+            About Virtual Stack: Calgary-based outsourcing since 2011.
           </h1>
           <p className="text-xs sm:text-sm text-[#5F7183] leading-relaxed max-w-2xl mx-auto">
             Virtual Stack delivers dedicated operational infrastructure, back-office excellence,

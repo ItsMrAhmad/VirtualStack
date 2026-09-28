@@ -53,7 +53,7 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-3.5 sm:space-y-4">
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-[40px] xl:text-[45px] font-extrabold text-white tracking-tight leading-[1.12] font-heading">
-              Scale Your Business With a Team You Can{" "}
+              Scale Your Business With an Outsourcing Team You Can{" "}
               <span className="text-[#08A9E6]">Trust</span>
             </h1>
 

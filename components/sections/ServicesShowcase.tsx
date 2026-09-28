@@ -28,7 +28,7 @@ export default function ServicesShowcase() {
               <Link href={`/services#${pillar.id}`} className="block relative w-full h-28 sm:h-32 xl:h-36 overflow-hidden bg-slate-100">
                 <Image
                   src={`/images/service-${pillar.id}.jpg`}
-                  alt={`${pillar.title} - Virtual Stack BPO`}
+                  alt={`${pillar.title} outsourcing team at work`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-300"

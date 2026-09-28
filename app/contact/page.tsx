@@ -23,15 +23,13 @@ export default function ContactPage() {
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
-      <link rel="preconnect" href="https://assets.calendly.com" />
-      <link rel="preconnect" href="https://calendly.com" />
       <JsonLd data={getContactPageJsonLd()} />
       {/* Slide 1: Direct Contact & Instant Scheduling */}
       <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-0 sm:my-auto w-full max-w-5xl mx-auto space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#071A2A] tracking-tight font-heading">
-              Let&apos;s discuss your operations.
+              Contact Virtual Stack: let&apos;s discuss your operations.
             </h1>
             <p className="text-xs sm:text-sm text-[#5F7183] leading-relaxed">
               Have a question or looking to scope a new dedicated team? Our operations leadership is available
@@ -47,12 +45,12 @@ export default function ContactPage() {
                   <Calendar className="w-4 h-4 text-[#08A9E6]" />
                   <span>Direct Online Scheduling</span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold font-heading">
+                <h2 className="text-lg sm:text-xl font-bold font-heading">
                   Prefer to schedule directly?
-                </h3>
+                </h2>
                 <p className="text-xs text-[#94A3B8] leading-relaxed">
-                  Skip the back-and-forth email replies. Choose a convenient 10-minute slot on our live calendar
-                  and receive a Zoom meeting invitation automatically.
+                  Request a free 10-minute Zoom consultation and we&apos;ll send you an invite for a time that
+                  suits you. Prefer to talk now? Call us 24/7.
                 </p>
               </div>
 
@@ -61,7 +59,7 @@ export default function ContactPage() {
                   href="/book-a-consultation"
                   className="inline-flex items-center justify-center gap-2 w-full bg-[#08A9E6] hover:bg-[#078FCC] text-white text-xs font-semibold py-3 px-4 rounded-xl shadow transition-colors"
                 >
-                  <span>Book Free Consultation on Zoom &rarr;</span>
+                  <span>Request a Free Zoom Consultation &rarr;</span>
                 </Link>
                 <a
                   href="#inquiry-form"
@@ -74,9 +72,9 @@ export default function ContactPage() {
 
             {/* Verified Contact Details Card */}
             <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#DDE6ED] shadow-xs space-y-4 flex flex-col justify-between">
-              <h3 className="text-sm sm:text-base font-bold text-[#071A2A] uppercase tracking-wider font-heading pb-2.5 border-b border-[#DDE6ED]">
+              <h2 className="text-sm sm:text-base font-bold text-[#071A2A] uppercase tracking-wider font-heading pb-2.5 border-b border-[#DDE6ED]">
                 Verified Corporate Details
-              </h3>
+              </h2>
 
               <div className="space-y-3 text-xs sm:text-sm text-[#5F7183]">
                 <div className="flex items-start gap-2.5">

@@ -78,7 +78,7 @@ export default function IndustriesPage() {
               </div>
 
               <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#071A2A] tracking-tight font-heading leading-tight">
-                Trained for your industry&apos;s <span className="text-[#08A9E6]">specific workflows.</span>
+                Industry-specific outsourcing, <span className="text-[#08A9E6]">trained on your workflows.</span>
               </h1>
 
               <p className="text-xs sm:text-sm text-[#08A9E6] font-semibold leading-snug">
@@ -216,7 +216,7 @@ export default function IndustriesPage() {
                 <div className="relative w-full h-28 sm:h-32 overflow-hidden bg-slate-100">
                   <Image
                     src={`/images/industry-${ind.slug}.jpg`}
-                    alt={ind.name}
+                    alt={`${ind.name} outsourcing services`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -272,7 +272,7 @@ export default function IndustriesPage() {
                 <div className="relative w-full h-28 sm:h-32 overflow-hidden bg-slate-100">
                   <Image
                     src={`/images/industry-${ind.slug}.jpg`}
-                    alt={ind.name}
+                    alt={`${ind.name} outsourcing services`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -334,7 +334,7 @@ export default function IndustriesPage() {
               <Landmark className="w-6 h-6 text-[#08A9E6]" />
               <h3 className="text-sm font-bold text-[#071A2A] font-heading">Regulatory Alignment</h3>
               <p className="text-xs text-[#5F7183] leading-relaxed">
-                HIPAA-ready workflows, PCI-DSS compliance awareness, and strict NDAs.
+                SOC 2 Type II, ISO 27001, PCI-DSS and HIPAA compliant operations, backed by strict NDAs.
               </p>
             </div>
           </div>

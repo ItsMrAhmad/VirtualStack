@@ -132,11 +132,11 @@ export default function IndustryServiceHero({
                       idx === 0 ? "pl-1 sm:pl-2" : idx === 2 ? "pr-1 sm:pr-2" : ""
                     }`}
                   >
-                    <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl ${iconBg} flex items-center justify-center shrink-0`}>
-                      <StatIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className={`hidden sm:flex w-10 h-10 rounded-xl ${iconBg} items-center justify-center shrink-0`}>
+                      <StatIcon className="w-5 h-5" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className={`text-base sm:text-lg font-black tracking-tight font-heading leading-tight ${valColor}`}>
+                      <div className={`text-base sm:text-lg font-black tracking-tight font-heading leading-tight whitespace-nowrap ${valColor}`}>
                         {stat.value}
                       </div>
                       <div className="text-[11px] sm:text-xs text-[#5F7183] font-medium leading-tight mt-0.5">

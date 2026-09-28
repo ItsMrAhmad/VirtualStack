@@ -43,7 +43,7 @@ export const blogCategories = [
   { name: "Security & Compliance", slug: "security-compliance" },
 ];
 
-export const articlesData: Article[] = [
+const rawArticles: Article[] = [
   {
     id: "customer-support-playbook-2026",
     slug: "customer-support-playbook-2026",
@@ -509,3 +509,31 @@ export const articlesData: Article[] = [
     },
   },
 ];
+
+/** Estimates reading time from the article's actual text (about 200 words per minute). */
+function estimateReadTime(article: Article): string {
+  const { introduction, keyTakeaways, sections, conclusion } = article.content;
+  const text = [introduction, ...keyTakeaways, ...sections.flatMap((s) => [s.heading, s.body]), conclusion].join(" ");
+  const words = text.split(/\s+/).filter(Boolean).length;
+  return `${Math.max(1, Math.ceil(words / 200))} min read`;
+}
+
+export const articlesData: Article[] = rawArticles.map((article) => ({
+  ...article,
+  readTime: estimateReadTime(article),
+}));
+
+/** Picks related articles: same category first, then shared tags, then most recent. */
+export function getRelatedArticles(article: Article, limit = 3): Article[] {
+  return articlesData
+    .filter((a) => a.id !== article.id)
+    .map((a) => ({
+      article: a,
+      score:
+        (a.categorySlug === article.categorySlug ? 10 : 0) +
+        a.tags.filter((t) => article.tags.includes(t)).length,
+    }))
+    .sort((x, y) => y.score - x.score)
+    .slice(0, limit)
+    .map((x) => x.article);
+}

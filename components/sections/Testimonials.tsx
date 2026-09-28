@@ -132,7 +132,8 @@ export default function Testimonials() {
           onFocus={handleFocus}
           onBlur={handleBlur}
           role="region"
-          aria-live="polite"
+          aria-label="Testimonials carousel"
+          aria-live="off"
         >
           <div className="flex -ml-4 sm:-ml-5 lg:-ml-6 items-stretch">
             {testimonialsData.map((item, idx) => (

@@ -36,7 +36,7 @@ export async function generateStaticParams() {
 }
 
 import { buildMetadata } from "@/lib/seo";
-import JsonLd, { getIndustryJsonLd } from "@/components/seo/JsonLd";
+import JsonLd, { getIndustryJsonLd, getFaqPageJsonLd } from "@/components/seo/JsonLd";
 
 export async function generateMetadata({ params }: IndustryPageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -104,7 +104,13 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       tabIndex={0}
       className="h-screen h-[100dvh] overflow-y-scroll snap-y snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
-      <JsonLd data={getIndustryJsonLd(industry)} />
+      <JsonLd
+        data={
+          industry.faqs.length > 0
+            ? [...getIndustryJsonLd(industry), getFaqPageJsonLd(industry.faqs)]
+            : getIndustryJsonLd(industry)
+        }
+      />
       {/* Slide 1: Unified Reusable Hero Template */}
       <IndustryServiceHero
         badge={config.badge}
@@ -121,7 +127,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
         trustLine={config.trustLine}
         compatibility={config.compatibility}
         imageSrc={`/images/industry-${industry.slug}.jpg`}
-        imageAlt={industry.name}
+        imageAlt={`Virtual Stack team supporting ${industry.name.toLowerCase()} operations`}
         imageCardTitle={config.imageTitle}
         imageCardSubtitle={config.imageSubtitle}
         imageStatusBadge={config.statusBadge}
@@ -151,7 +157,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
                 {industry.challenges.map((c, idx) => (
                   <div key={idx} className="space-y-0.5">
                     <h4 className="text-xs sm:text-sm font-bold text-[#071A2A]">{c.title}</h4>
-                    <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2">{c.description}</p>
+                    <p className="text-xs text-[#5F7183] leading-relaxed">{c.description}</p>
                   </div>
                 ))}
               </div>
@@ -167,7 +173,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
                 {industry.solutions.map((s, idx) => (
                   <div key={idx} className="space-y-0.5">
                     <h4 className="text-xs sm:text-sm font-bold text-[#071A2A]">{s.title}</h4>
-                    <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2">{s.description}</p>
+                    <p className="text-xs text-[#5F7183] leading-relaxed">{s.description}</p>
                   </div>
                 ))}
               </div>
@@ -197,7 +203,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
                 <div className="p-1.5 rounded-lg bg-[#EBF7FD] text-[#08A9E6] shrink-0">
                   <CheckCircle2 className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs font-semibold text-[#071A2A] line-clamp-1">{cap}</span>
+                <span className="text-xs font-semibold text-[#071A2A]">{cap}</span>
               </div>
             ))}
           </div>
@@ -206,7 +212,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
             {industry.operationalBenefits.map((b, idx) => (
               <div key={idx} className="bg-white rounded-xl p-4 border border-[#DDE6ED] shadow-xs space-y-1">
                 <h3 className="text-xs sm:text-sm font-bold text-[#071A2A] font-heading">{b.title}</h3>
-                <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2">{b.description}</p>
+                <p className="text-xs text-[#5F7183] leading-relaxed">{b.description}</p>
               </div>
             ))}
           </div>
@@ -243,22 +249,28 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
             ))}
           </div>
 
-          {/* Industry FAQs */}
+          {/* Industry FAQs: rendered in full so they match the FAQPage schema */}
           {industry.faqs.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-4xl mx-auto pt-2">
-              {industry.faqs.slice(0, 4).map((faq, idx) => (
-                <div
+            <div className="space-y-2.5 max-w-4xl mx-auto pt-2">
+              {industry.faqs.map((faq, idx) => (
+                <details
                   key={idx}
-                  className="p-3.5 rounded-xl bg-[#F7FAFC] border border-[#DDE6ED] space-y-1"
+                  className="group p-3.5 rounded-xl bg-[#F7FAFC] border border-[#DDE6ED] open:border-[#08A9E6]/50"
+                  open={idx === 0}
                 >
-                  <h3 className="text-xs font-bold text-[#071A2A] flex items-center gap-1.5">
-                    <HelpCircle className="w-3.5 h-3.5 text-[#08A9E6] shrink-0" />
-                    <span className="line-clamp-1">{faq.question}</span>
-                  </h3>
-                  <p className="text-xs text-[#5F7183] leading-relaxed line-clamp-2 pl-5">
+                  <summary className="cursor-pointer list-none flex items-start justify-between gap-3">
+                    <h3 className="text-xs sm:text-sm font-bold text-[#071A2A] flex items-start gap-1.5">
+                      <HelpCircle className="w-3.5 h-3.5 text-[#08A9E6] shrink-0 mt-0.5" />
+                      <span>{faq.question}</span>
+                    </h3>
+                    <span aria-hidden="true" className="text-[#08A9E6] font-bold group-open:rotate-45 transition-transform">
+                      +
+                    </span>
+                  </summary>
+                  <p className="text-xs sm:text-sm text-[#5F7183] leading-relaxed pl-5 pt-2">
                     {faq.answer}
                   </p>
-                </div>
+                </details>
               ))}
             </div>
           )}

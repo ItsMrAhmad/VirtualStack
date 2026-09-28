@@ -38,7 +38,7 @@ export default function FAQsPage() {
         <div className="my-auto w-full max-w-4xl mx-auto space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#071A2A] tracking-tight font-heading">
-              Clear answers about partnering with us.
+              Outsourcing FAQs: clear answers about partnering with us.
             </h1>
             <p className="text-xs sm:text-sm text-[#5F7183] leading-relaxed">
               Everything you need to know about our operational delivery, data security controls, onboarding
@@ -115,7 +115,7 @@ export default function FAQsPage() {
               </h2>
             </div>
             <p className="text-xs sm:text-sm text-[#5F7183]">
-              How we vet, interview, and transition your workflows in 14 business days.
+              How we vet, interview, and transition your workflows in 1–2 weeks.
             </p>
           </div>
 

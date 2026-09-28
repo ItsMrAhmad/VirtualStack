@@ -7,6 +7,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import Footer from "@/components/layout/Footer";
 import BlogClient from "./BlogClient";
 import { articlesData } from "@/lib/data/articles";
+import { companyData } from "@/lib/data/company";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
@@ -32,7 +33,7 @@ export default function BlogPage() {
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#071A2A] tracking-tight font-heading">
-              Operational Insights & Benchmarks
+              Outsourcing Insights & Operations Guides
             </h1>
             <p className="text-xs sm:text-sm text-[#5F7183] leading-relaxed">
               Practical strategies, frameworks, and data from our operations leadership pod on scaling
@@ -153,23 +154,17 @@ export default function BlogPage() {
             </div>
 
             <div className="w-full md:w-auto shrink-0 space-y-2">
-              <form
-                action="#"
-                className="flex flex-col sm:flex-row gap-2"
+              <a
+                href={`mailto:${companyData.contacts.email}?subject=${encodeURIComponent(
+                  "Subscribe: Executive Operational Briefings"
+                )}&body=${encodeURIComponent(
+                  "Hi Virtual Stack team,\n\nPlease add me to the quarterly Executive Operational Briefings.\n\nName:\nCompany:\n\nThanks,"
+                )}`}
+                className="inline-flex items-center justify-center gap-2 bg-[#08A9E6] hover:bg-[#078FCC] text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-colors w-full md:w-auto"
               >
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter work email..."
-                  className="px-4 py-2 rounded-xl border border-[#DDE6ED] text-xs text-[#071A2A] placeholder-[#5F7183] w-full sm:w-64 outline-none focus:border-[#08A9E6] bg-[#F7FAFC]"
-                />
-                <button
-                  type="submit"
-                  className="bg-[#08A9E6] hover:bg-[#078FCC] text-white text-xs font-semibold px-5 py-2 rounded-xl transition-colors shrink-0"
-                >
-                  Subscribe Free
-                </button>
-              </form>
+                <Mail className="w-3.5 h-3.5" />
+                <span>Request the Briefings by Email</span>
+              </a>
               <p className="text-[10px] text-[#5F7183] text-center md:text-left">
                 Strictly executive research. Zero spam. Unsubscribe anytime.
               </p>
@@ -186,7 +181,7 @@ export default function BlogPage() {
               </p>
             </div>
             <div className="p-5 rounded-2xl bg-white border border-[#DDE6ED] space-y-1.5">
-              <div className="text-xl font-extrabold text-[#08A9E6] font-heading">14 Days</div>
+              <div className="text-xl font-extrabold text-[#08A9E6] font-heading">1–2 Weeks</div>
               <h3 className="text-xs font-bold text-[#071A2A]">SOP Shadow to Live Flight</h3>
               <p className="text-[11px] text-[#5F7183] leading-relaxed">
                 Structured knowledge transfer and sandbox certification before live deployment.
