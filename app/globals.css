@@ -201,43 +201,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Full-Viewport Scroll-Snap Architecture
+   Full-Viewport Scroll-Snap Architecture (Desktop Only)
    ========================================================================== */
-html:has([id$="-scroll-container"]),
-body:has([id$="-scroll-container"]) {
-  overflow: hidden !important;
-  height: 100% !important;
-}
+@media (min-width: 1024px) {
+  html:has([id$="-scroll-container"]),
+  body:has([id$="-scroll-container"]) {
+    overflow: hidden !important;
+    height: 100% !important;
+  }
 
-body:has([id$="-scroll-container"]) #site-navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+  body:has([id$="-scroll-container"]) #site-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 
-[id$="-scroll-container"] {
-  height: calc(100vh - var(--header-height)) !important;
-  height: calc(100dvh - var(--header-height)) !important;
-  /* Proximity (not mandatory) so sections taller than the screen can be read in full */
-  scroll-snap-type: y proximity !important;
-  -webkit-overflow-scrolling: touch;
-}
+  [id$="-scroll-container"] {
+    height: calc(100vh - var(--header-height)) !important;
+    height: calc(100dvh - var(--header-height)) !important;
+    /* Proximity (not mandatory) so sections taller than the screen can be read in full */
+    scroll-snap-type: y proximity !important;
+    -webkit-overflow-scrolling: touch;
+  }
 
-/* Each slide fills at least one screen, but grows when its content is taller
-   (e.g. on phones) instead of squeezing it into a nested scroll box. */
-[id$="-scroll-container"] > section,
-[id$="-scroll-container"] > div[class*="-snap-section"],
-[id$="-scroll-container"] > [data-snap-section] {
-  min-height: calc(100vh - var(--header-height)) !important;
-  min-height: calc(100dvh - var(--header-height)) !important;
-  height: auto !important;
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-}
+  /* Each slide fills at least one screen, but grows when its content is taller
+     (e.g. on phones) instead of squeezing it into a nested scroll box. */
+  [id$="-scroll-container"] > section,
+  [id$="-scroll-container"] > div[class*="-snap-section"],
+  [id$="-scroll-container"] > [data-snap-section] {
+    min-height: calc(100vh - var(--header-height)) !important;
+    min-height: calc(100dvh - var(--header-height)) !important;
+    height: auto !important;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
 
-[id$="-scroll-container"] > div[class*="-snap-section"] {
-  background-color: #071A2A !important;
+  [id$="-scroll-container"] > div[class*="-snap-section"] {
+    background-color: #071A2A !important;
+  }
 }
 
 /* Chatbot launcher animations */

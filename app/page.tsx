@@ -22,9 +22,9 @@ export const metadata: Metadata = buildMetadata({
 export default function HomePage() {
   return (
     <div
-      id="home-page-wrapper"
+      id="home-scroll-container"
       tabIndex={0}
-      className="relative bg-white text-[#0B1724] outline-none"
+      className="lg:h-screen lg:h-[100dvh] lg:overflow-y-scroll lg:snap-y lg:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       {/* 1. Hero Section with Background Operations Imagery */}
       <HeroSection />
@@ -51,7 +51,7 @@ export default function HomePage() {
       <FinalCTA />
 
       {/* 9. Dedicated Footer Snap Slide */}
-      <div className="home-snap-section w-full snap-start snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
+      <div className="home-snap-section w-full lg:snap-start lg:snap-always min-h-[100dvh] lg:h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
         <Footer />
       </div>
     </div>

@@ -41,7 +41,7 @@ export default function IndustryGrid() {
   return (
     <section
       id="industries"
-      className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
+      className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
     >
       <div className="my-auto w-full max-w-7xl mx-auto">
         {/* Section Header */}
@@ -65,16 +65,16 @@ export default function IndustryGrid() {
           </div>
         </div>
 
-        {/* Responsive CSS Scroll Snap Row */}
-        <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory flex gap-4 lg:gap-5 pb-3 pt-1 -mx-4 px-4 sm:mx-0 sm:px-0">
+        {/* Responsive Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 pt-1">
           {industriesData.map((ind) => (
             <div
               key={ind.slug}
-              className="w-[80vw] sm:w-[calc(50%-10px)] lg:w-[calc(25%-15px)] shrink-0 snap-start flex"
+              className="flex flex-col h-full"
             >
               <Link
                 href={`/industries/${ind.slug}`}
-                className="w-full bg-white rounded-xl overflow-hidden border border-[#DDE6ED] hover:border-[#08A9E6] hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
+                className="w-full h-full bg-white rounded-xl overflow-hidden border border-[#DDE6ED] hover:border-[#08A9E6] hover:shadow-md transition-all duration-200 flex flex-col justify-between group"
               >
                 <div className="relative w-full h-28 sm:h-32 overflow-hidden bg-slate-100">
                   <Image

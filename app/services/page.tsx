@@ -45,12 +45,12 @@ export default function ServicesPage() {
 
   return (
     <div
-      id="services-page-wrapper"
+      id="services-scroll-container"
       tabIndex={0}
-      className="relative bg-white text-[#0B1724] outline-none"
+      className="lg:h-screen lg:h-[100dvh] lg:overflow-y-scroll lg:snap-y lg:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       {/* Slide 1: Services Hero & Quick Jump */}
-      <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-start pt-24 sm:pt-26 items-center px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-start pt-24 sm:pt-26 items-center px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="w-full max-w-7xl mx-auto mt-2 sm:mt-3">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             {/* Text on LEFT (lg:col-span-7) */}
@@ -182,7 +182,7 @@ export default function ServicesPage() {
         <section
           key={pillar.id}
           id={pillar.id}
-          className={`h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-28 pb-4 sm:pb-6 relative z-10 overflow-y-auto sm:overflow-visible ${
+          className={`min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-28 pb-4 sm:pb-6 relative z-10 overflow-y-auto sm:overflow-visible ${
             pIdx % 2 === 0 ? "bg-white" : "bg-[#F7FAFC]"
           } border-b border-[#DDE6ED]`}
         >
@@ -256,7 +256,7 @@ export default function ServicesPage() {
       ))}
 
       {/* Slide 6: Delivery Models Comparison */}
-      <section className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto mb-6 space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
@@ -377,7 +377,7 @@ export default function ServicesPage() {
       <FinalCTA />
 
       {/* Slide 8: Dedicated Footer Snap Slide */}
-      <div className="services-snap-section w-full snap-start snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
+      <div className="services-snap-section w-full lg:snap-start lg:snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
         <Footer />
       </div>
     </div>

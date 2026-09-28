@@ -106,7 +106,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="h-screen h-[100dvh] min-h-screen min-h-[100dvh] w-full snap-start snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] dark:bg-[#04101B] border-b border-[#DDE6ED] dark:border-[#1A2E40]"
+      className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] dark:bg-[#04101B] border-b border-[#DDE6ED] dark:border-[#1A2E40]"
       aria-roledescription="carousel"
       aria-label="Client Testimonials"
     >
