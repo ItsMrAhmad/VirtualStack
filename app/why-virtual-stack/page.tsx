@@ -82,7 +82,7 @@ export default function WhyVirtualStackPage() {
     <div
       id="why-virtual-stack-scroll-container"
       tabIndex={0}
-      className="md:h-screen md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       {/* Slide 1: Hero & Infrastructure Photo */}
       <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-4 sm:py-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">

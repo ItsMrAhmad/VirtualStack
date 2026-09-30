@@ -27,7 +27,7 @@ export default function FAQsPage() {
     <div
       id="faqs-scroll-container"
       tabIndex={0}
-      className="md:h-screen md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       <JsonLd data={getFaqPageJsonLd(faqsData)} />
       {/* Slide 1: Hero & General Operations */}
