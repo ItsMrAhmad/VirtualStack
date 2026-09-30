@@ -24,7 +24,7 @@ export default function HomePage() {
     <div
       id="home-scroll-container"
       tabIndex={0}
-      className="md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="snap-none md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       {/* 1. Hero Section with Background Operations Imagery */}
       <HeroSection />

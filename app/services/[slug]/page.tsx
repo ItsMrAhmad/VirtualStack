@@ -141,7 +141,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     <div
       id="service-detail-scroll-container"
       tabIndex={0}
-      className="md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="snap-none md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       <JsonLd data={schemaData} />
       {/* Slide 1: Unified Reusable Hero Template */}

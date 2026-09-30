@@ -19,7 +19,7 @@ export default function BookAConsultationPage() {
     <div
       id="booking-scroll-container"
       tabIndex={0}
-      className="md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-[#F7FAFC] text-[#0B1724] outline-none"
+      className="snap-none md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-[#F7FAFC] text-[#0B1724] outline-none"
     >
       <link rel="preconnect" href="https://assets.calendly.com" />
       <link rel="preconnect" href="https://calendly.com" />
