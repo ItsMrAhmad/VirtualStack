@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    Full-Viewport Scroll-Snap Architecture (Desktop Only)
    ========================================================================== */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   html:has([id$="-scroll-container"]),
   body:has([id$="-scroll-container"]) {
     overflow: hidden !important;

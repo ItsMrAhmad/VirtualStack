@@ -41,7 +41,7 @@ export default function IndustryGrid() {
   return (
     <section
       id="industries"
-      className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
+      className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
     >
       <div className="my-auto w-full max-w-7xl mx-auto">
         {/* Section Header */}

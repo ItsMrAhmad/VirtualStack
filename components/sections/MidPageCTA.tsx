@@ -4,7 +4,7 @@ import { Calendar, PhoneCall, ArrowRight } from "lucide-react";
 
 export default function MidPageCTA() {
   return (
-    <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
+    <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
       <div className="my-auto w-full max-w-7xl mx-auto">
         <div className="bg-gradient-to-r from-[#071A2A] via-[#0D253C] to-[#071A2A] rounded-3xl p-8 sm:p-10 lg:p-12 text-white shadow-xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 border border-[#1C354E]">
           {/* Subtle Glow */}

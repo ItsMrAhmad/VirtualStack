@@ -141,7 +141,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     <div
       id="service-detail-scroll-container"
       tabIndex={0}
-      className="lg:h-screen lg:h-[100dvh] lg:overflow-y-scroll lg:snap-y lg:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="md:h-screen md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       <JsonLd data={schemaData} />
       {/* Slide 1: Unified Reusable Hero Template */}
@@ -169,7 +169,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       />
 
       {/* Slide 2: Challenges & Solutions */}
-      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto space-y-4 sm:space-y-6 mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
@@ -217,7 +217,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* Slide 3: Core Capabilities & Delivery Workflow */}
-      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto space-y-5 mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
@@ -262,7 +262,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       </section>
 
       {/* Slide 4: Business Benefits & FAQs */}
-      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 md:pt-32 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto space-y-5 mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
@@ -340,7 +340,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       <FinalCTA />
 
       {/* Slide 6: Dedicated Footer Snap Slide */}
-      <div className="service-detail-snap-section w-full lg:snap-start lg:snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
+      <div className="service-detail-snap-section w-full md:snap-start md:snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
         <Footer />
       </div>
     </div>

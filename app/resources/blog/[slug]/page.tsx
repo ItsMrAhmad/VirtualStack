@@ -61,11 +61,11 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
     <div
       id="article-detail-scroll-container"
       tabIndex={0}
-      className="lg:h-screen lg:h-[100dvh] lg:overflow-y-scroll lg:snap-y lg:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
+      className="md:h-screen md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       <JsonLd data={getBlogPostingJsonLd(article)} />
       {/* Slide 1: Hero & Cover Visual */}
-      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-4xl mx-auto space-y-4">
           <nav className="flex items-center space-x-2 text-xs text-[#5F7183]">
             <Link href="/" className="hover:text-[#08A9E6] transition-colors">
@@ -143,7 +143,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
       </section>
 
       {/* Slide 2: Article Analysis & Takeaways (Dedicated Reading Pane) */}
-      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-3xl mx-auto space-y-6">
           {/* Executive Takeaways Box */}
           <div className="p-5 sm:p-6 rounded-2xl bg-[#EBF7FD]/60 border border-[#08A9E6]/30 space-y-3">
@@ -228,7 +228,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
       </section>
 
       {/* Slide 3: Related Operational Insights & Next Steps */}
-      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-4xl mx-auto space-y-6">
           <div className="flex items-center justify-between border-b border-[#DDE6ED] pb-3">
             <div className="flex items-center gap-2">
@@ -301,7 +301,7 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
       <FinalCTA />
 
       {/* Slide 5: Footer */}
-      <div className="article-detail-snap-section w-full lg:snap-start lg:snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
+      <div className="article-detail-snap-section w-full md:snap-start md:snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
         <Footer />
       </div>
     </div>

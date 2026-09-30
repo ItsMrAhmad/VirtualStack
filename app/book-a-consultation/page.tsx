@@ -19,12 +19,12 @@ export default function BookAConsultationPage() {
     <div
       id="booking-scroll-container"
       tabIndex={0}
-      className="lg:h-screen lg:h-[100dvh] lg:overflow-y-scroll lg:snap-y lg:snap-mandatory scroll-smooth relative bg-[#F7FAFC] text-[#0B1724] outline-none"
+      className="md:h-screen md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-[#F7FAFC] text-[#0B1724] outline-none"
     >
       <link rel="preconnect" href="https://assets.calendly.com" />
       <link rel="preconnect" href="https://calendly.com" />
       {/* Slide 1: Discovery & Calendly Embed */}
-      <section className="min-h-[100dvh] lg:h-[100dvh] w-full lg:snap-start lg:snap-always flex flex-col justify-start lg:justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-28 pb-8 relative z-10 overflow-y-auto bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start lg:justify-center items-center px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 lg:pt-28 pb-8 relative z-10 overflow-y-auto bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="w-full max-w-7xl mx-auto my-auto py-2">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             {/* Left Column: Value Proposition & Expectations */}
@@ -41,7 +41,7 @@ export default function BookAConsultationPage() {
       </section>
 
       {/* Slide 2: Dedicated Footer Snap Slide */}
-      <div className="booking-snap-section w-full lg:snap-start lg:snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
+      <div className="booking-snap-section w-full md:snap-start md:snap-always min-h-[100dvh] h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
         <Footer />
       </div>
     </div>
