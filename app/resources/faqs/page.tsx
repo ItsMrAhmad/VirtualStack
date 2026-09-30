@@ -33,7 +33,7 @@ export default function FAQsPage() {
       {/* Slide 1: Hero & General Operations */}
       <section
         id="general"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]"
+        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]"
       >
         <div className="my-auto w-full max-w-4xl mx-auto space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-3">
@@ -104,7 +104,7 @@ export default function FAQsPage() {
       {/* Slide 2: Onboarding & Deployment */}
       <section
         id="onboarding"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
+        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
       >
         <div className="my-auto w-full max-w-4xl mx-auto space-y-6">
           <div className="space-y-2">
@@ -161,7 +161,7 @@ export default function FAQsPage() {
       {/* Slide 3: Enterprise Security & Compliance */}
       <section
         id="security"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
+        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
       >
         <div className="my-auto w-full max-w-4xl mx-auto space-y-6">
           <div className="space-y-2 text-center max-w-xl mx-auto">
@@ -216,7 +216,7 @@ export default function FAQsPage() {
       {/* Slide 4: Operations & Systems Integration */}
       <section
         id="operations"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
+        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
       >
         <div className="my-auto w-full max-w-4xl mx-auto space-y-6">
           <div className="space-y-2">
@@ -257,7 +257,7 @@ export default function FAQsPage() {
       {/* Slide 5: Transparent Billing & Custom Questions */}
       <section
         id="billing"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-18 sm:pt-22 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
+        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
       >
         <div className="my-auto w-full max-w-4xl mx-auto space-y-6">
           <div className="space-y-2">

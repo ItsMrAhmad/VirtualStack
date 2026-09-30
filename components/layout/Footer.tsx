@@ -16,7 +16,7 @@ export default function Footer({ className }: { className?: string }) {
   return (
     <footer
       className={`bg-[#071A2A] text-white w-full min-h-full flex-1 flex flex-col justify-between border-t border-[#1C354E] ${
-        className || "pt-16 sm:pt-20 lg:pt-24 pb-6 sm:pb-8"
+        className || "pt-8 sm:pt-10 lg:pt-12 pb-6 sm:pb-8"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-between">

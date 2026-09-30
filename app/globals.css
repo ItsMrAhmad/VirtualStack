@@ -220,21 +220,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   [id$="-scroll-container"] {
-    height: 100dvh !important;
+    height: calc(100vh - var(--header-height)) !important;
+    height: calc(100dvh - var(--header-height)) !important;
     overflow-y: scroll !important;
     scroll-snap-type: y mandatory !important;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Each snap-child fills exactly one viewport */
+  /* Each snap section fills exactly the visible viewport height below the navbar */
   [id$="-scroll-container"] > section,
   [id$="-scroll-container"] > div[class*="-snap-section"],
   [id$="-scroll-container"] > [data-snap-section] {
-    height: 100dvh !important;
-    min-height: 100dvh !important;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    height: calc(100vh - var(--header-height)) !important;
+    height: calc(100dvh - var(--header-height)) !important;
+    min-height: calc(100vh - var(--header-height)) !important;
+    min-height: calc(100dvh - var(--header-height)) !important;
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
     overflow-y: auto;
   }
 
