@@ -100,7 +100,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white text-[#0B1724] selection:bg-[#08A9E6] selection:text-white">
         <ScrollSnapDelegate />
         <Navbar />
-        <main className="flex-1 pt-[var(--header-height)]">{children}</main>
+        <main className="flex-1">{children}</main>
         <MobileStickyCTA />
         <ChatLauncher />
       </body>

@@ -109,7 +109,6 @@ export default function HeroSection() {
 
       {/* Scroll Down Visual Affordance */}
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-0.5 pointer-events-none">
-        <span className="text-[10px] font-semibold text-[#94A3B8] tracking-widest uppercase">Scroll</span>
         <ChevronDown className="w-3.5 h-3.5 animate-bounce text-[#08A9E6]" />
       </div>
     </section>

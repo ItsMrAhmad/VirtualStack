@@ -70,9 +70,7 @@
 }
 
 /* Global Shared Layout Clearance for Fixed/Sticky Header */
-main {
-  padding-top: var(--header-height);
-}
+/* Removed global main padding to avoid white gaps on mobile. Handled conditionally below. */
 
 html {
   scroll-behavior: smooth;
@@ -217,6 +215,10 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     left: 0;
     right: 0;
+  }
+
+  body:has([id$="-scroll-container"]) main {
+    padding-top: var(--header-height);
   }
 
   [id$="-scroll-container"] {
