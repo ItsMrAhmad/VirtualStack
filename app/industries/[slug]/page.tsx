@@ -135,7 +135,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       />
 
       {/* Slide 2: Challenges & Specialized Solutions */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
+      <section className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto space-y-4 sm:space-y-6 mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
@@ -183,7 +183,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       </section>
 
       {/* Slide 3: Specialized Capabilities & Operational Benefits */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto space-y-5 mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
@@ -220,7 +220,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
       </section>
 
       {/* Slide 4: Recommended Services & FAQs */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
+      <section className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto space-y-5 mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto space-y-1">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">

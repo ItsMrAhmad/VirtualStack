@@ -82,7 +82,7 @@ export default function IndustryServiceHero({
   extraPills,
 }: IndustryServiceHeroProps) {
   return (
-    <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start pt-6 sm:pt-8 items-center px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
+    <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start pt-6 sm:pt-8 items-center px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
       <div className="w-full max-w-7xl mx-auto mt-0 sm:mt-1">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           {/* Left Column: Offer, Copy, Stats, CTAs, Trust */}

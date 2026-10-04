@@ -74,29 +74,29 @@ export default function OperationsDiagram() {
         </div>
 
         {/* 4 Pillars Routing Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           {/* Pillar 1: Customer Support */}
           <Link
             href="/services#customer-experience"
-            className="p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
+            className="p-3 sm:p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
           >
-            <div className="flex items-center justify-between mb-2">
-              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors">
+            <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-2 gap-1.5">
+              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors w-fit">
                 <Headphones className="w-3.5 h-3.5" />
               </div>
               {/* Metric Badge: Standardized metric badge */}
-              <span className="text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-2 py-0.5 rounded border border-[#08A9E6]/20">
+              <span className="text-[8px] sm:text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-1.5 sm:px-2 py-0.5 rounded border border-[#08A9E6]/20 w-fit">
                 {/* TODO: Connect to live helpdesk SLA metrics */}
                 &lt;60s Response
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <h5 className="text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors">
+              <h5 className="text-[11px] sm:text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors leading-tight">
                 Customer Support
               </h5>
-              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0 hidden sm:block" />
             </div>
-            <p className="text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
+            <p className="text-[10px] sm:text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
               Inbound voice, live chat, email helpdesk & 24/7 receptionists.
             </p>
           </Link>
@@ -104,25 +104,25 @@ export default function OperationsDiagram() {
           {/* Pillar 2: Back Office Operations */}
           <Link
             href="/services#back-office"
-            className="p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
+            className="p-3 sm:p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
           >
-            <div className="flex items-center justify-between mb-2">
-              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors">
+            <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-2 gap-1.5">
+              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors w-fit">
                 <Layers className="w-3.5 h-3.5" />
               </div>
               {/* Metric Badge: Standardized metric badge */}
-              <span className="text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-2 py-0.5 rounded border border-[#08A9E6]/20">
+              <span className="text-[8px] sm:text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-1.5 sm:px-2 py-0.5 rounded border border-[#08A9E6]/20 w-fit">
                 {/* TODO: Connect to live back-office QA audit feed */}
                 99.8% Accuracy
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <h5 className="text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors">
+              <h5 className="text-[11px] sm:text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors leading-tight">
                 Back Office Operations
               </h5>
-              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0 hidden sm:block" />
             </div>
-            <p className="text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
+            <p className="text-[10px] sm:text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
               Data management, document indexing, KYC verification & admin support.
             </p>
           </Link>
@@ -130,25 +130,25 @@ export default function OperationsDiagram() {
           {/* Pillar 3: Sales & Growth */}
           <Link
             href="/services#sales-growth"
-            className="p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
+            className="p-3 sm:p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
           >
-            <div className="flex items-center justify-between mb-2">
-              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors">
+            <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-2 gap-1.5">
+              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors w-fit">
                 <TrendingUp className="w-3.5 h-3.5" />
               </div>
               {/* Metric Badge: Standardized metric badge */}
-              <span className="text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-2 py-0.5 rounded border border-[#08A9E6]/20">
+              <span className="text-[8px] sm:text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-1.5 sm:px-2 py-0.5 rounded border border-[#08A9E6]/20 w-fit">
                 {/* TODO: Connect to live outbound booking analytics */}
                 +35% Bookings
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <h5 className="text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors">
+              <h5 className="text-[11px] sm:text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors leading-tight">
                 Sales & Growth
               </h5>
-              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0 hidden sm:block" />
             </div>
-            <p className="text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
+            <p className="text-[10px] sm:text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
               B2B lead generation, appointment booking, telesales & surveys.
             </p>
           </Link>
@@ -156,25 +156,25 @@ export default function OperationsDiagram() {
           {/* Pillar 4: Dedicated Remote Teams */}
           <Link
             href="/services#dedicated-teams"
-            className="p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
+            className="p-3 sm:p-4 rounded-xl bg-[#071A2A]/70 border border-[#1C354E] hover:border-[#08A9E6] hover:bg-[#0B2238] transition-all duration-200 group block cursor-pointer"
           >
-            <div className="flex items-center justify-between mb-2">
-              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors">
+            <div className="flex flex-col xl:flex-row xl:items-center justify-between mb-2 gap-1.5">
+              <div className="p-1.5 rounded-md bg-[#08A9E6]/10 text-[#08A9E6] group-hover:bg-[#08A9E6] group-hover:text-white transition-colors w-fit">
                 <Users className="w-3.5 h-3.5" />
               </div>
               {/* Metric Badge: Standardized metric badge */}
-              <span className="text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-2 py-0.5 rounded border border-[#08A9E6]/20">
+              <span className="text-[8px] sm:text-[9px] font-semibold text-[#08A9E6] bg-[#08A9E6]/10 px-1.5 sm:px-2 py-0.5 rounded border border-[#08A9E6]/20 w-fit">
                 {/* TODO: Connect to annual talent pod retention data */}
                 96% Retention
               </span>
             </div>
             <div className="flex items-center justify-between">
-              <h5 className="text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors">
+              <h5 className="text-[11px] sm:text-xs font-bold text-white font-heading group-hover:text-[#08A9E6] transition-colors leading-tight">
                 Dedicated Remote Teams
               </h5>
-              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+              <ArrowRight className="w-3 h-3 text-[#08A9E6] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0 hidden sm:block" />
             </div>
-            <p className="text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
+            <p className="text-[10px] sm:text-[11px] text-[#94A3B8] mt-1 line-clamp-2 leading-tight">
               Exclusive full-time talent, executive virtual assistants & staff leasing.
             </p>
           </Link>

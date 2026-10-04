@@ -100,7 +100,7 @@ export default function ChatbotWidget({ initialOpen = false }: { initialOpen?: b
           id="vs-chat-panel"
           role="dialog"
           aria-label="Chat with Virtual Stack's virtual assistant"
-          className="pointer-events-auto mb-3 w-[calc(100vw-2rem)] sm:w-[380px] h-[520px] max-h-[calc(100dvh-130px)] bg-white rounded-2xl shadow-[0_20px_50px_rgba(7,26,42,0.35)] border border-[#DDE6ED] flex flex-col overflow-hidden animate-in"
+          className="pointer-events-auto fixed inset-0 z-[100] sm:z-auto sm:relative sm:inset-auto sm:mb-3 w-full sm:w-[380px] h-[100dvh] sm:h-[520px] sm:max-h-[calc(100dvh-130px)] bg-white sm:rounded-2xl shadow-2xl sm:shadow-[0_20px_50px_rgba(7,26,42,0.35)] border-0 sm:border border-[#DDE6ED] flex flex-col overflow-hidden animate-in"
         >
           {/* Header */}
           <div className="bg-[#071A2A] px-4 py-3.5 border-b border-[#08A9E6]/30 text-white shrink-0">

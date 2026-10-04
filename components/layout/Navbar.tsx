@@ -453,7 +453,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-full bg-white border-b border-[#DDE6ED] shadow-2xl max-h-[85vh] overflow-y-auto px-6 py-6 animate-in slide-in-from-top-4 duration-300">
+          <div className="lg:hidden fixed inset-x-0 top-full bg-white border-b border-[#DDE6ED] shadow-2xl max-h-[calc(100dvh-var(--header-height))] overflow-y-auto px-6 py-6 animate-in slide-in-from-top-4 duration-300">
             <div className="space-y-6">
               {/* Quick Contact Details on Mobile */}
               <div className="p-3.5 rounded-xl bg-[#F7FAFC] border border-[#DDE6ED] flex items-center justify-between">

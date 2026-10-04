@@ -28,7 +28,7 @@ export default function BlogPage() {
       className="snap-none md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       {/* Slide 1: Hero & Featured Article (Server-Rendered) */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
+      <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-7xl mx-auto space-y-5">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto space-y-2">
@@ -137,7 +137,7 @@ export default function BlogPage() {
       <BlogClient articles={libraryArticles} />
 
       {/* Slide 3: Executive Operational Briefings (Server Component) */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-5xl mx-auto space-y-6">
           <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#DDE6ED] shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center md:text-left max-w-lg">

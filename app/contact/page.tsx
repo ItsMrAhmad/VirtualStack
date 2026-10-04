@@ -25,7 +25,7 @@ export default function ContactPage() {
     >
       <JsonLd data={getContactPageJsonLd()} />
       {/* Slide 1: Direct Contact & Instant Scheduling */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
+      <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="my-0 sm:my-auto w-full max-w-5xl mx-auto space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#071A2A] tracking-tight font-heading">
@@ -132,7 +132,7 @@ export default function ContactPage() {
       {/* Slide 2: Interactive Operational Inquiry Form */}
       <section
         id="inquiry-form"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-[#F7FAFC] border-b border-[#DDE6ED]"
+        className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-[#F7FAFC] border-b border-[#DDE6ED]"
       >
         <div className="my-0 sm:my-auto w-full max-w-3xl mx-auto">
           <ConsultationForm />

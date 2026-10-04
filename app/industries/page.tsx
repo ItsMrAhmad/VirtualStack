@@ -63,7 +63,7 @@ export default function IndustriesPage() {
       className="snap-none md:h-[100dvh] md:overflow-y-scroll md:snap-y md:snap-mandatory scroll-smooth relative bg-white text-[#0B1724] outline-none"
     >
       {/* Slide 1: Hero */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start py-6 sm:py-8 items-center px-4 sm:px-6 lg:px-8 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
+      <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start py-6 sm:py-8 items-center px-4 sm:px-6 lg:px-8 relative z-10 overflow-y-auto sm:overflow-visible bg-gradient-to-b from-[#F7FAFC] to-white border-b border-[#DDE6ED]">
         <div className="w-full max-w-7xl mx-auto mt-2 sm:mt-3">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
             {/* Text on LEFT (lg:col-span-7) */}
@@ -194,7 +194,7 @@ export default function IndustriesPage() {
       {/* Slide 2: High-Volume Transactional Verticals */}
       <section
         id="transactional-verticals"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
+        className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
       >
         <div className="my-auto w-full max-w-7xl mx-auto mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto mb-5 sm:mb-6 space-y-1">
@@ -250,7 +250,7 @@ export default function IndustriesPage() {
       {/* Slide 3: Professional & Technical Verticals */}
       <section
         id="professional-verticals"
-        className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
+        className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
       >
         <div className="my-auto w-full max-w-7xl mx-auto mt-3 sm:mt-5">
           <div className="text-center max-w-2xl mx-auto mb-5 sm:mb-6 space-y-1">
@@ -304,7 +304,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Slide 4: Security & Compliance Framework */}
-      <section className="min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="my-auto w-full max-w-4xl mx-auto text-center space-y-6 mt-3 sm:mt-5">
           <div className="space-y-2">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#071A2A] font-heading">
