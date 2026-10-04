@@ -7,7 +7,7 @@ export default function OutsourcingModel() {
   return (
     <section
       id="how-we-outsource"
-      className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#071A2A] text-white border-b border-[#1A2E40]"
+      className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#071A2A] text-white border-b border-[#1A2E40]"
     >
       {/* High-Definition Glowing Outsourcing Graphic Backdrop */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">

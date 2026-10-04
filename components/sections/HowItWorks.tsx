@@ -33,7 +33,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
+      className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-white border-b border-[#DDE6ED]"
     >
       <div className="my-auto w-full max-w-7xl mx-auto">
         {/* Section Header */}

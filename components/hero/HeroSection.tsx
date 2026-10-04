@@ -9,7 +9,7 @@ import { companyData } from "@/lib/data/company";
 export default function HeroSection() {
 
   return (
-    <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#071A2A] text-white border-b border-[#1A2E40]">
+    <section className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start sm:justify-center items-center px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-6 relative z-10 overflow-y-auto sm:overflow-visible bg-[#071A2A] text-white border-b border-[#1A2E40]">
       {/* Background Operations Center Image Backdrop (Right-Anchored & Blended into Deep Navy) */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <Image

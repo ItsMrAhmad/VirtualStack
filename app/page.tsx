@@ -51,7 +51,7 @@ export default function HomePage() {
       <FinalCTA />
 
       {/* 9. Dedicated Footer Snap Slide */}
-      <div className="home-snap-section w-full md:snap-start md:snap-always md:md:min-h-[100dvh] md:h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
+      <div className="home-snap-section w-full md:snap-start md:snap-always md:min-h-[100dvh] md:h-[100dvh] bg-[#071A2A] flex flex-col justify-between overflow-y-auto">
         <Footer />
       </div>
     </div>

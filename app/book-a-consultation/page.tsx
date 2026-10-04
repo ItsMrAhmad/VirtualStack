@@ -24,7 +24,7 @@ export default function BookAConsultationPage() {
       <link rel="preconnect" href="https://assets.calendly.com" />
       <link rel="preconnect" href="https://calendly.com" />
       {/* Slide 1: Discovery & Calendly Embed */}
-      <section className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start lg:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-[#F7FAFC] border-b border-[#DDE6ED]">
+      <section className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-start lg:justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto bg-[#F7FAFC] border-b border-[#DDE6ED]">
         <div className="w-full max-w-7xl mx-auto my-auto py-2">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
             {/* Left Column: Value Proposition & Expectations */}

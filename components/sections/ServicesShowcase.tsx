@@ -7,7 +7,7 @@ export default function ServicesShowcase() {
   return (
     <section
       id="pillars-showcase"
-      className="md:md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
+      className="md:min-h-[100dvh] md:h-[100dvh] w-full md:snap-start md:snap-always flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-6 sm:py-8 relative z-10 overflow-y-auto sm:overflow-visible bg-[#F7FAFC] border-b border-[#DDE6ED]"
     >
       <div className="my-auto w-full max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-5 sm:mb-7">
@@ -25,7 +25,7 @@ export default function ServicesShowcase() {
               key={pillar.id}
               className="bg-white border border-[#DDE6ED] hover:border-[#08A9E6]/60 rounded-2xl shadow-xs hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col group"
             >
-              <Link href={`/services#${pillar.id}`} className="block relative w-full h-28 sm:h-32 xl:h-36 overflow-hidden bg-slate-100">
+              <Link href={`/services#${pillar.id}`} className="block relative w-full aspect-video sm:aspect-auto sm:h-32 xl:h-36 overflow-hidden bg-slate-100">
                 <Image
                   src={`/images/service-${pillar.id}.jpg`}
                   alt={`${pillar.title} outsourcing team at work`}
