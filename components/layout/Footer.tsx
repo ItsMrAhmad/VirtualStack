@@ -257,6 +257,19 @@ export default function Footer({ className }: { className?: string }) {
             </button>
           </div>
         </div>
+
+        {/* Attribution */}
+        <div className="pt-4 text-center text-xs text-[#94A3B8]">
+          Built by{" "}
+          <a
+            href="https://techsistlabs.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#08A9E6] hover:text-white transition-colors font-medium"
+          >
+            Techsist Labs
+          </a>
+        </div>
       </div>
     </footer>
   );
