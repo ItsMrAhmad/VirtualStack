@@ -78,7 +78,7 @@ export default function CalendlyEmbed({ calendlyUrl }: CalendlyEmbedProps) {
     <div className="w-full bg-white rounded-2xl border border-[#DDE6ED] shadow-sm overflow-hidden flex flex-col">
       <div className="p-4 sm:p-5 border-b border-[#DDE6ED] bg-[#F7FAFC] flex items-center gap-3">
         <div className="w-10 h-10 rounded-xl bg-[#071A2A] border border-[#1E3347] flex items-center justify-center p-1.5 shadow-sm shrink-0">
-          <Image src="/icon.png" alt="" width={32} height={32} className="w-7 h-7 object-contain" />
+          <Image src="/icon.png" alt="Virtual Stack" width={32} height={32} className="w-7 h-7 object-contain" />
         </div>
         <div>
           <h2 className="text-sm font-bold text-[#071A2A] font-heading">Virtual Stack Discovery Call</h2>

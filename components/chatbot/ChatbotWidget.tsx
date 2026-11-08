@@ -109,7 +109,7 @@ export default function ChatbotWidget({ initialOpen = false }: { initialOpen?: b
                 <div className="relative w-9 h-9 rounded-xl bg-[#0D253C] flex items-center justify-center p-1.5 border border-[#08A9E6]/30 shrink-0">
                   <Image
                     src="/icon.png"
-                    alt=""
+                    alt="Virtual Stack"
                     width={26}
                     height={26}
                     className="w-full h-full object-contain"
